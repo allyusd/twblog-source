@@ -10,7 +10,7 @@ locale                   : "en"
 title                    : "Jian-Ching's Notebook"
 title_separator          : "-"
 name                     : "Hong, Jian-Ching"
-description              : "An amazing website."
+description              : "An notebook website."
 url                      : "https://allyusd.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -79,7 +79,7 @@ analytics:
 author:
   name             : "Hong, Jian-Ching"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
+  bio              : "Software engineer"
   location         : "Taichung City, Taiwan"
   email            : "allyusd yahoo com tw"
   uri              : "https://allyusd.github.io/"
@@ -171,7 +171,7 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
+permalink: /:year/:month/:day/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: "Asia/Taipei" # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
