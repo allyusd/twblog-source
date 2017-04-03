@@ -1,7 +1,6 @@
 ---
-title:  "New blog online!"
-tags:
-  - jekyll
+title: "New blog online!"
+tags: post
 ---
 
 I have a Chinese blog [Jian-Ching 學習筆記](//jian-ching.blogspot.com) at blogger since 2014-02-20.
