@@ -53,9 +53,8 @@ Note: [See Where a Package is Installed on Ubuntu](https://www.howtogeek.com/how
 ```
 
 If the process is correct, you will see that:
-```
-Hello SDL2 with C++
-```
+
+![demo image](/assets/images/2017-04-03-install-sdl2-and-build-example-with-c++-on-ubuntu/demo.png)
 
 # Other
 
