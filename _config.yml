@@ -6,12 +6,12 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-locale                   : "en"
-title                    : "Jian-Ching's Notebook"
+locale                   : "zh-TW"
+title                    : "Jian-Ching 記事本"
 title_separator          : "-"
-name                     : "Hong, Jian-Ching"
+name                     : "洪健清"
 description              : "An notebook website."
-url                      : "https://blog.HongJianChing.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://twblog.HongJianChing.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -20,7 +20,7 @@ words_per_minute         : 200
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
-    shortname            : "allyusd" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : "allyusd-twblog" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -77,10 +77,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Hong, Jian-Ching"
+  name             : "洪健清"
   avatar           : "https://en.gravatar.com/userimage/52239647/ccc888d68eb39b778b50b2032ee4c033.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Software engineer"
-  location         : "Taichung City, Taiwan"
+  bio              : "軟體程式工程師"
+  location         : "台灣，台中市"
   email            : "allyusd yahoo com tw"
   uri              : "https://www.HongJianChing.com/"
   bitbucket        :
