@@ -1,5 +1,5 @@
 ---
-title: "Install SDL2 and build example with C++ on Ubuntu"
+title: "Install SDL2 with Cpp on Ubuntu"
 tags: post
 ---
 
