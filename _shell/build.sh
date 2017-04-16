@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run -e "JEKYLL_ENV=production" --name jekyll --rm -p 4000:4000 -v $(pwd):/home/ubuntu/jekyll -u $(id -u):$(id -g) allyusd/ubuntu-jekyll bundle exec jekyll build
+docker run -e "JEKYLL_ENV=production" --name build --rm -p 4000:4000 -v $(pwd):/home/ubuntu/jekyll -u $(id -u):$(id -g) allyusd/ubuntu-jekyll bundle exec jekyll build
