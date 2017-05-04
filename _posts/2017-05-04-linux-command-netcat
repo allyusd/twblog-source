@@ -14,12 +14,14 @@ sudo apt-get install netcat
 
 # Server Side
 
-Netcat open port 12345 licensing, waiting for client connection
+Netcat 開啟 port 12345 進行偵聽, 等待 client 連線
+
 ```shell
 nc -vvlnp 12345 >/dev/null
 ```
 
-Need root if went to use system port like 80
+如果想要使用系統 port 像是 80 的話需要 root
+
 ```shell
 sudo nc -vvlnp 80 >/dev/null
 ```
@@ -28,6 +30,7 @@ sudo nc -vvlnp 80 >/dev/null
 
 使用 dd 產生資料，並透過 netcat 傳送到 server
 此範例會產生 1GM 的資料量 (1MB * 1K)
+
 ```shell
 dd if=/dev/zero bs=1M count=1K | nc -vvn 13.75.44.147 80
 ```
