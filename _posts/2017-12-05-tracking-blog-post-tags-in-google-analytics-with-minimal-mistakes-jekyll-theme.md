@@ -21,6 +21,7 @@ tags: Google-Analytics Jekyll Minimal-Mistakes
 修改後
 
 ```html
+{% raw %}
 <script>
   ...
 
@@ -32,7 +33,9 @@ tags: Google-Analytics Jekyll Minimal-Mistakes
   {% endfor %}
   {% endif %}
 </script>
+{% endraw %}
 ```
+
 
 
 [^1]:[Tracking Your Most Popular Blog Post Tags in Google Analytics with Jekyll](https://maxchadwick.xyz/blog/tracking-your-most-popular-blog-post-tags-in-google-analytics-with-jekyll)
