@@ -1,6 +1,6 @@
 ---
 title: "Linux command netcat"
-tags: post
+tags: Command-Line-Tools netcat
 ---
 
 Netcat 是 Linux 下的網路工具，這裡用來進行網路頻寬測試。

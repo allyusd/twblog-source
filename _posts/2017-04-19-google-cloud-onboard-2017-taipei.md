@@ -1,6 +1,6 @@
 ---
 title: "Google Cloud OnBoard 2017 Taipei"
-tags: post
+tags: GCP 心得
 ---
 2017-04-19 Google Cloud OnBoard 活動在台北國際會議中心舉行。
 
