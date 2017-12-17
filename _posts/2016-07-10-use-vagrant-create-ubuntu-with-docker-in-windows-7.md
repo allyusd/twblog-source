@@ -21,7 +21,7 @@ Vagrant 包裝好的環境，稱為 Vagrant Box，本來在 Vagrant Cloud 提供
 
 下載安裝完 VirutalBox 及 Vagrant 之後，就可以開啟命令提示字元 (cmd.exe) 來操作嘍。首先建立這次要使用的資料夾，會用來放 vagrant 設定檔
 
-```bat
+```bash
 mkdir vagrant\ubuntu
 cd vagrant\ubuntu
 ```
@@ -30,7 +30,7 @@ cd vagrant\ubuntu
 
 目標版本為 Ubuntu 14.04 LTS ，直接用已經存在的 Box 來進行初始化。
 
-```bat
+```bash
 vagrant init ubuntu/trusty64
 ```
 
@@ -38,7 +38,7 @@ vagrant init ubuntu/trusty64
 
 初始化會在資料夾產生一個 Vagrantfile，是 Vagrant 主要的設定檔，目前只有指定 Box 名稱，如果想要設定 cpu, memory 等等，也在這裡設定，目前先用預設值來啟動 VM。
 
-```bat
+```bash
 vagrant up
 ```
 
@@ -48,7 +48,7 @@ vagrant up
 
 接著使用 ssh 登入 VM吧。
 
-```
+```bash
 vagrant ssh
 ```
 
