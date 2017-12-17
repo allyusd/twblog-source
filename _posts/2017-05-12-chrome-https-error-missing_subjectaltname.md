@@ -1,6 +1,6 @@
 ---
 title: "Chrome 58 https error missing_subjectAltName"
-tags: post
+tags: Chrome
 ---
 
 Chrome 58 版之後 https 網站出現錯誤 missing_subjectAltName

@@ -1,6 +1,6 @@
 ---
-title: "wget 下載檔案遇到網頁亂碼問題"
-tags: post
+title: "Wget 下載檔案遇到網頁亂碼問題"
+tags: Command-Line-Tools Wget
 ---
 
 今天在 FB 看到這個問題，試著解決後紀錄下來。
