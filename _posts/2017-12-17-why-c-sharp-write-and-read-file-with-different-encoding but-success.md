@@ -39,7 +39,7 @@ Console.ReadLine();
 
 首先假設會不會是異名同意，也就是 BigEndianUnicode 是 UTF8 的別名，兩者是相同的東西，那就可以解釋為什麼可以正確顯示。
 
-然而透過 Google 找到的 MSDN 資料表示 BigEndianUnicode 是 由大到小的位元組順序 (big endian) 的 UTF-16，也就是 UTF-16 BE。 所以兩者是不同的東西，假設不成立。[^2][^3][^4][^5]
+然而透過 Google 找到的 MSDN 資料表示 BigEndianUnicode 是由大到小的位元組順序 (big endian) 的 UTF-16，也就是 UTF-16 BE。 所以兩者是不同的東西，假設不成立。[^2][^3][^4][^5]
 
 [^2]:[MSDN - Encoding.UTF8 屬性](https://msdn.microsoft.com/zh-tw/library/system.text.encoding.utf8(v=vs.110).aspx)
 [^3]:[MSDN - Encoding.BigEndianUnicode 屬性](https://msdn.microsoft.com/zh-tw/library/system.text.encoding.bigendianunicode(v=vs.110).aspx)
@@ -47,9 +47,9 @@ Console.ReadLine();
 [^5]:[Wiki - UTF-16](https://zh.wikipedia.org/wiki/UTF-16)
 
 ## 題外話 UTF-8
-中間岔題跑去復習，UTF-8 是由 8 位元 (即 1 個位元組) 為最小單位所組成的可變長度編碼，為了相容 ASCII 而設計出來的機制，而且正因為最小單位只有 1 個位元組，所以不像 UTF-16 存在位元組順序 (byte-order) 的問題，換言之，不需要加上 BOM。
+中間岔題跑去復習，UTF-8 是由 8 位元 (即 1 個位元組) 為最小單位所組成的可變長度編碼，為了相容 ASCII 而設計出來的機制，而且正因為最小單位只有 1 個位元組，所以不像 UTF-16 存在位元組順序 (byte-order) 的問題，實際上不需要加上 BOM。
 
-所以 UTF-16 有分 UTF-16 LE 和 UTF-16 BE，但是 UTF-8 只有一種，就是 UTF-8。
+所以 UTF-16 有分 UTF-16 LE 和 UTF-16 BE，但是 UTF-8 只有一種，就是 UTF-8，回頭想想一開始認為 BigEndianUnicode 是 UTF8 的別名還真是誤會大了。
 
 然而 Windows 作業系統不少程式(像是記事本)，預設會對 UTF-8 檔案加上 BOM，而 Linux 則避免妨礙到像是解譯器腳本而不加 BOM，對於沒有預期要處理 BOM 的 Linux 程式而言，會造成讀取錯誤，這也是跨平台常遇到的事情之一。[^6]
 
