@@ -1,5 +1,5 @@
 ---
-title: "Ubuntu Automatic Security Updates"
+title: "Ubuntu 自動更新安全性套件"
 tags: Ubuntu Automatic
 ---
 
