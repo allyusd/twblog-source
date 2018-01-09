@@ -1,11 +1,11 @@
 ---
-title: "Install SDL2 with Cpp on Ubuntu"
+title: "在 Ubuntu 安裝 SDL2 和 C++"
 tags: Cpp SDL2 Ubuntu
 ---
 
 # Install SDL2 on Ubuntu
 
-你可以容易的從套件安裝或是自行編譯[^1].
+可以簡單的從套件安裝或是自行編譯[^1].
 
 [^1]: [HOW TO SET UP SDL2 ON LINUX](http://gigi.nullneuron.net/gigilabs/how-to-set-up-sdl2-on-linux/)
 
