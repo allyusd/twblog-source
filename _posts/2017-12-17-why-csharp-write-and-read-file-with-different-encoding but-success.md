@@ -1,6 +1,6 @@
 ---
 title: "為什麼 C# 使用不同編碼讀寫檔案卻成功？"
-tags: Command-Line-Tools Wget
+tags: CSharp Encoding
 ---
 
 ## 問題
