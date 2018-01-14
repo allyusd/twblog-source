@@ -3,7 +3,7 @@ title: "使用 Visual Studio Code 開發 .Net Core"
 tags: Visual-Studio-Code .Net-Core CSharp
 ---
 
-.Net Core 是跨平台解決方案，同時 Visual Studio Code 也是跨平台方發工具，所以兩者搭配是很好的選擇。
+.Net Core 是跨平台解決方案，同時 Visual Studio Code 也是跨平台開發工具，所以兩者搭配是很好的選擇。
 
 ## 安裝 Visual Studio Code 及 .Net Core
 
