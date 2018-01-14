@@ -21,7 +21,7 @@ tags: Visual-Studio-Code .Net-Core CSharp
 
 ![](/assets/images/2018-01-14-visual-studio-code-with-dotnet-core/001.png)
 
-，然後在 terminal (Ctrl+`) 使用 dotnet 指令建立一個 console 專案。執行後會發現 vs-code 左方檔案總管已經出現專案所需的檔案。
+然後在終端機 (Ctrl+`) 使用 new 指令建立一個 console 專案。執行後會看到 vs-code 左方檔案總管已經出現專案所需的檔案。
 
 ```bash
 dotnet new console
@@ -35,7 +35,7 @@ dotnet run
 
 ![](/assets/images/2018-01-14-visual-studio-code-with-dotnet-core/002.png)
 
-[dotnet restore 不見了？](#dotnet-restore)
+[曾經使用的 dotnet restore 不見了？](#dotnet-restore)
 
 ## 開發及偵錯
 
@@ -78,7 +78,7 @@ namespace hello_world
 
 ![](/assets/images/2018-01-14-visual-studio-code-with-dotnet-core/004.png)
 
-接著稍微調整程式碼如下：
+接著稍微調整 Program.cs 程式碼如下：
 
 ```csharp
 static void Main(string[] args)
@@ -120,6 +120,8 @@ static void Main(string[] args)
 再次按下 F5 後，切換到終端機 (Ctrl+`)
 
 ![](/assets/images/2018-01-14-visual-studio-code-with-dotnet-core/006.png)
+
+教學結束，接著可以開始進行其它 C# 的練習嘍！
 
 ## dotnet restore
 
