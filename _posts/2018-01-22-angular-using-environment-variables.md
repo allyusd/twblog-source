@@ -33,7 +33,7 @@ export const environment = {
 
 ```
 
-然後在 service 加入
+然後編輯 foo.service.ts
 
 ```ts
 import { environment } from '../../environments/environment';
@@ -42,7 +42,11 @@ private baseUrl : string = environment.apiUrl + 'foo';
 ‧‧‧
 ```
 
-這麼一來，在開發環境時，baseUrl 是 'http://localhost/api/foo'，在生產環境時，baseUrl 是 'http://demo.com/api/foo'，這樣就可以達到開發跟生產環境使用不同的設定。
+在開發環境時，baseUrl 是 'http://localhost/api/foo'
+
+在生產環境時，baseUrl 是 'http://demo.com/api/foo'
+
+這樣就可以達到開發跟生產環境使用不同的設定。
 
 ## Reference
 
