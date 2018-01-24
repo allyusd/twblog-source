@@ -1,5 +1,5 @@
 ---
-title: "最好的內部頂級網域"
+title: "最好的內部頂級網域 (Best internal top level domain)"
 tags: Domain
 ---
 
