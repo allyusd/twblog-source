@@ -15,22 +15,35 @@ tags: Cpp Coding-Style Automatic-Formatter
 
 ## 基本用法
 
-* --style=allman
+```
+--style=allman
+```
 大括號都在新的一行
 
-* --exclue=####
+```
+--exclue=####
+```
 排除特定檔案或目標
 
-* --ignore-exclude-errors-x / -xi
+```
+--ignore-exclude-errors-x / -xi
+```
 忽略且不顯示被排除的項目
 
-* --suffix=none / -n
+```
+--suffix=none / -n
+```
 不保留原始檔的備份
 
-* --recursive / -r / -R
+```
+--recursive / -r / -R
+```
+
 遞歸處理所有子目錄
 
-* --quiet / -q
+```
+--quiet / -q
+```
 不會有任何的訊息
 
 將上面的選項組合起來，對這一層開始包含所有子目錄的 .cpp 及 .h 檔案進行格式化，但是排除 depend 目錄，範例：
@@ -44,50 +57,81 @@ astyle --style=allman --exclude=depend -A1xinrq *.cpp *.h
 ```
 
 ## 風格設定
-* --style=allman / --style=bsd / --style=break / -A1
+
+```
+--style=allman / --style=bsd / --style=break / -A1
+```
 大括號都在新的一行
 
-* --indent-switches / -S
+```
+--indent-switches / -S
+```
 switch 內縮排
 
-* --indent-namespaces / -N
+```
+--indent-namespaces / -N
+```
 namespaces 內縮排
 
-* --indent-after-parens / -xU
+```
+--indent-after-parens / -xU
+```
 多行的參數縮排
 
-* --indent-preproc-block / -xW
+```
+--indent-preproc-block / -xW
+```
 預處理器內縮排，像是 #ifdef ... #endif 之間
 
-* --indent-col1-comments / -Y
+```
+--indent-col1-comments / -Y
+```
 註解跟著程式碼一起縮排
 
-* --pad-oper / -p
+```
+--pad-oper / -p
+```
 操作符號前後空白，像是 1+1 會變成 1 + 1
 
-* --pad-header / -H 
+```
+--pad-header / -H
+```
 在 if, while, for 之後加上空白
 
-* --align-pointer=type   / -k1
+```
+--align-pointer=type   / -k1
+```
 將指標或參考符號靠近型別，像是 string& my_name;
 
-* --add-braces / -j 
+```
+--add-braces / -j 
+```
 只有一行的 if 也加上大括號
 
-* --close-templates / -xy
+```
+--close-templates / -xy
+```
 消除連續模板間的空白
 
-* --mode=c
+```
+--mode=c
+```
 指定為 C, C++, C++/CLI, and Objective-C 程式語言
 
-* --delete-empty-lines / -xe
+```
+--delete-empty-lines / -xe
+```
 本來想用結果發現他會砍過頭，先不使用
 
-* --max-code-length=#   / -xC#
+```
+--max-code-length=#   / -xC#
 --break-after-logical / -xL
+```
 每行字元上限，目前覺得不需要處理
 
-* --indent=tab / --indent=tab=# / -t / -t#
+```
+--indent=tab / --indent=tab=# / -t / -t#
+```
 取代 tab 為空白字元，跟 IDE 預設值衝突，先不使用
 
 長指令範示：
