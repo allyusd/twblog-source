@@ -51,7 +51,7 @@ QString Logic::getHelloMessage(QString name)
 
 Run Test, 我們會得到一個紅燈
 
-![](/assets/images/2018-07-28-qt-unit-test-with-visual-studio/2018-07-28_17-49-45.png)
+![](/assets/images/2018-07-28-qt-unit-test-with-visual-studio/2018-07-28_20-24-27.png)
 
 ## 實作 Qt 程式碼
 
