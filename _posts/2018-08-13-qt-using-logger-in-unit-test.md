@@ -10,7 +10,7 @@ tags: Qt Unit-Test Visual-Studio
 ## Legacy Code
 開始主題前，先來聊一聊 Legacy Code，
 
-在 [Working Effectively with Legacy Code](https://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052) 中，作者對於 Legacy Code 的定義為，沒有測試的程式碼。因為缺乏測試，所以害怕去修改現有的程式碼。
+在 [Working Effectively with Legacy Code](https://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052) 中，作者對於 Legacy Code 的定義為，沒有測試的程式碼。因為缺乏測試，所以害怕去修改現有的程式碼。久而久之，就越來越不敢修改了，因為你不知道改了之後會弄壞了什麼。
 
 ### 高偶合
 在實際案例上，往往 Legacy Code 又有各種疊床架屋的情況，常常會牽一髮而動全身。
@@ -20,7 +20,7 @@ tags: Qt Unit-Test Visual-Studio
 要加上單元測試，就不可避免會遇到程式缺乏可測試性的問題，偏偏 Legacy Code 往往欠缺可測試性。
 
 ### 重構
-想要擁有可測試性，就要將現有的程式改寫，需要進行重構。然而，重構是有風險的，建議先寫測試再開始重構。
+想要擁有可測試性，就要將程式改寫，需要進行重構。然而，重構是有風險的，建議先寫測試再開始重構。
 
 ### 先有雞？先有蛋？
 很好，我們已經陷入了無窮迴圈，可能有人耐不住決定打掉重練了。別急，讓我們回到主題。
@@ -41,9 +41,9 @@ QString Logic::getHelloMessage(QString name)
 }
 ```
 
-中間有使用 Qt logger 進行輸出，借助於 Qt logging framework 的完善設計，可以直接利用 qInstallMessageHandler 函式進行注入。在其它架構或語言，應該不難找到 ILog 或是 LogFactory 之類的方法。
+中間有使用 Qt logger 進行輸出，借助於 Qt logging framework 的完善設計，可以直接利用 qInstallMessageHandler 函式進行注入。在其它架構或語言，試著找到 ILog 或是 LogFactory 之類的方法。
 
-下面是 Unit Test 的使用方法
+下面是 Unit Test 中使用 logger 的方法
 
 ```cpp
 static QVector<std::string> g_loggerMessages;
@@ -64,4 +64,4 @@ TEST(TestLogic, HelloMessage)
 }
 ```
 
-這個技巧可以利用最低的成本，最小的改變為 Legacy Code 補上 Unit Test，緊接著透過 [Working Effectively with Legacy Code](https://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052) 中的技巧，開始拆解程式間的相依性。
+這個技巧可以利用最低的成本，最小的改變為 Legacy Code 補上 Unit Test，接著透過 [Working Effectively with Legacy Code](https://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052) 中的技巧，開始拆解程式間的相依性。
