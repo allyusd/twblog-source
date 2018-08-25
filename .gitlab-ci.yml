@@ -13,6 +13,9 @@ job:
     # WARNING: use only in docker container, if you use it with shell you will overwrite your user's ssh config
     - mkdir -p ~/.ssh
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    # config user info
+    - git config --global user.email "allyusd@yahoo.com.tw"
+    - git config --global user.name "Hong, Jian-Ching"
     - git clone git@github.com:allyusd/twblog.git $CI_PROJECT_DIR/_site
     # per-build
     - bundle exec jekyll build    
