@@ -1,21 +1,22 @@
 image: allyusd/ubuntu-jekyll
 
 job:
-  # per-build
-  # install git
-  - apt-get update -y && apt-get install git -y
-  # run ssh-agent
-  - eval $(ssh-agent -s)
-  # add ssh key stored in SSH_PRIVATE_KEY variable to the agent store
-  - ssh-add <(echo "$DEPLOY_KEY")
-  # disable host key checking (NOTE: makes you susceptible to man-in-the-middle attacks)
-  # WARNING: use only in docker container, if you use it with shell you will overwrite your user's ssh config
-  - mkdir -p ~/.ssh
-  - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-  - git clone git@github.com:allyusd/twblog.git $CI_PROJECT_DIR/_site
-  # per-build
+  script: 
+    # per-build
+    # install git
+    - apt-get update -y && apt-get install git -y
+    # run ssh-agent
+    - eval $(ssh-agent -s)
+    # add ssh key stored in SSH_PRIVATE_KEY variable to the agent store
+    - ssh-add <(echo "$DEPLOY_KEY")
+    # disable host key checking (NOTE: makes you susceptible to man-in-the-middle attacks)
+    # WARNING: use only in docker container, if you use it with shell you will overwrite your user's ssh config
+    - mkdir -p ~/.ssh
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - git clone git@github.com:allyusd/twblog.git $CI_PROJECT_DIR/_site
+    # per-build
     - bundle exec jekyll build    
-  # deploy
+    # deploy
     - cd _site
     - git add -A
     - git commit -m "update from source"
