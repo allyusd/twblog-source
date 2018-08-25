@@ -1,6 +1,7 @@
 image: allyusd/ubuntu-jekyll
 
-before_script:
+job:
+  # per-build
   # install git
   - apt-get update -y && apt-get install git -y
   # run ssh-agent
@@ -11,26 +12,10 @@ before_script:
   # WARNING: use only in docker container, if you use it with shell you will overwrite your user's ssh config
   - mkdir -p ~/.ssh
   - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-
-stages:
-  - per-build
-  - build
-  - deploy
-
-job:
-  stage: per-build
-  script: 
-    - git clone git@github.com:allyusd/twblog.git $CI_PROJECT_DIR/_site
-
-
-build:
-  stage: build
-  script:
-    - bundle exec jekyll build
-
-deploy:
-  stage: deploy
-  script:
+  - git clone git@github.com:allyusd/twblog.git $CI_PROJECT_DIR/_site
+  # per-build
+    - bundle exec jekyll build    
+  # deploy
     - cd _site
     - git add -A
     - git commit -m "update from source"
