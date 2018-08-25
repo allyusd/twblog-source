@@ -1,0 +1,37 @@
+image: allyusd/ubuntu-jekyll
+
+before_script:
+  # install git
+  - apt-get update -y && apt-get install git -y
+  # run ssh-agent
+  - eval $(ssh-agent -s)
+  # add ssh key stored in SSH_PRIVATE_KEY variable to the agent store
+  - ssh-add <(echo "$DEPLOY_KEY")
+  # disable host key checking (NOTE: makes you susceptible to man-in-the-middle attacks)
+  # WARNING: use only in docker container, if you use it with shell you will overwrite your user's ssh config
+  - mkdir -p ~/.ssh
+  - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+
+stages:
+  - per-build
+  - build
+  - deploy
+
+job:
+  stage: per-build
+  script: 
+    - git clone git@github.com:allyusd/twblog.git $CI_PROJECT_DIR/_site
+
+
+build:
+  stage: build
+  script:
+    - bundle exec jekyll build
+
+deploy:
+  stage: deploy
+  script:
+    - cd _site
+    - git add -A
+    - git commit -m "update from source"
+    - git push
