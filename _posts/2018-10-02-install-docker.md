@@ -33,7 +33,7 @@ sudo usermod -aG docker $USER
 
 第二行則是將現有的使用者加入 docker 群組，否則會沒有權限操作 docker 指令
 
-ref: [Get Docker CE for Ubuntu | Docker Documentation](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-convenience-script)
+ref: [Get Docker CE for Ubuntu - Docker Documentation](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-convenience-script)
 
 記得重新登入取得新的權限，然後接著執行一下 hello world
 ```bash
