@@ -3,7 +3,7 @@ title: "使用 Docker - 基本操作"
 tags: 2019-iT-邦幫忙鐵人賽 Docker
 ---
 
-上一篇講安裝 Docker，
+上一篇講[安裝 Docker](https://twblog.hongjianching.com/2018/10/02/install-docker/)，
 
 這篇進入正題，開始使用 Docker
 
