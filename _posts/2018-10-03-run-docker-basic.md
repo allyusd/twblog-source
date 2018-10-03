@@ -20,7 +20,7 @@ docker ps -a
 ```
 如果有照著之前執行過 hello-world，就會發現他出現在清單上，而且是 Exit 狀態。
 
-![](/assets/images/2018-10-03-run-docker/2018-10-03_20-50-14.png)
+![](/assets/images/2018-10-03-run-docker/2018-10-03_20-50-15.png)
 
 # rm - 刪除容器
 使用 rm 指令，代表 remove 移除，可以使用 id 或者 name 來刪除
@@ -29,7 +29,7 @@ docker rm trusting_wozniak
 ```
 執行成功會顯示被刪除的名字，再用 ps -a 查詢會發現之前的容器已經消失嘍
 
-![](/assets/images/2018-10-03-run-docker/2018-10-03_20-58-51.png)
+![](/assets/images/2018-10-03-run-docker/2018-10-03_20-58-52.png)
 
 預設 rm 指令只能刪除停止的容器，如果要強制刪除執行中的容器，就要使用 -f 參數，代表 force 強制
 ```bash
@@ -49,7 +49,7 @@ docker run hello-world
 docker run --rm hello-world
 ```
 
-![](/assets/images/2018-10-03-run-docker/2018-10-03_21-07-42.png)
+![](/assets/images/2018-10-03-run-docker/2018-10-03_21-07-43.png)
 
 ## ubuntu
 只能跑 hello world 絕對不夠，接著來執行 ubuntu 吧。沒錯，在 ubuntu 上面執行 ubuntu 容器，這次 ubuntu 18.04 版本的 image 只有 [30.3 MB](https://microbadger.com/images/ubuntu:18.04)，比前一版 16.04 還少了 11 MB
@@ -63,7 +63,7 @@ docker run --rm ubuntu:18.04
 docker run --rm -it ubuntu:18.04
 ```
 
-![](/assets/images/2018-10-03-run-docker/2018-10-03_21-25-42.png)
+![](/assets/images/2018-10-03-run-docker/2018-10-03_21-25-43.png)
 
 這次因為 image 已經在本機了，所以馬上就進入容器內，可以開始大玩特玩喔。雖然 ubuntu docker image 為了最小化，所以很多套件都沒有預裝，但是有 apt-get 可以使用，不用太擔心，想要什麼自己裝就好了。
 
