@@ -21,13 +21,13 @@ service nginx start
 
 Dockerfile 最基本的指令是 FROM，也就是這個 Dockerfile 是繼承哪個 image 的。有一行就可以視為合格的 Dockerfile，像是我們用 ubuntu 當基底。
 
-```Dockerfile
+```
 FROM ubuntu:18.04
 ```
 
 當然，這樣產生的 image 會跟 ubuntu:18.04 一模一樣，所以我們要加上我們想要的，安裝 nginx 動作。透過 RUN 指令，可以幫我們做到這件事
 
-```Dockerfile
+```
 FROM ubuntu:18.04
 
 RUN apt update && apt install nginx -y
@@ -37,7 +37,7 @@ RUN apt update && apt install nginx -y
 
 這邊特別說明一下，如果 CMD 後面指定的是不會結束的程式，那就沒有問題，但是之前是透過 service 命令啟動的，因為這個命令一執行就結束了，接著容器就結束了，為了避免這種情況，後面加上了 /bin/bash 維持運作。(當然也可以直接執行 nginx 就不用這個動作)
 
-```Dockerfile
+```
 FROM ubuntu:18.04
 
 RUN apt update && apt install nginx -y
@@ -62,7 +62,7 @@ docker images
 
 從圖片中可以看到，除了我們之前用到的 hello-wrold 和 ubuntu:18.04 之外，還多了一個 webserver 的 image，這就是剛剛建立好的映像檔。這麼一來我們把之前的指令改用 webserver 來啟動吧。
 
-```base
+```bash
 docker run \
     --restart=always \
     -d \
