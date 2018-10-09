@@ -1,5 +1,5 @@
 ---
-title: " 在 Ubuntu 使用 Docker 安裝 Jenkins"
+title: "在 Ubuntu 使用 Docker 安裝 Jenkins"
 tags: 2019-iT-邦幫忙鐵人賽 Docker Jenkins Ubuntu
 ---
 
