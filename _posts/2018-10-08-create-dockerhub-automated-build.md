@@ -1,6 +1,6 @@
 ---
 title: "使用 GitHub 在 DockerHub 自動建置 Docker Image"
-tags: 2019-iT-邦幫忙鐵人賽 Docker
+tags: 2019-iT-邦幫忙鐵人賽 Docker Dockerhub Github Dockerfile
 ---
 
 今天要談論如何使用 GitHub 和 DockerHub 建立自動建置 Image，功能強大，但是反而非常的簡單喔！

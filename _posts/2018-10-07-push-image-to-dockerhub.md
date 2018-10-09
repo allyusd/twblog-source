@@ -1,6 +1,6 @@
 ---
 title: "將 Image 發佈到 Docker Hub"
-tags: 2019-iT-邦幫忙鐵人賽 Docker
+tags: 2019-iT-邦幫忙鐵人賽 Docker Dockerhub
 ---
 
 這篇會說明如何將 Image 發佈到 Docker Hub。
