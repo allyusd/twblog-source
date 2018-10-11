@@ -70,3 +70,7 @@ docker run \
 
 ![](/assets/images/2018-10-10-install-jenkins-agent-with-docker/2018-10-10_22-12-40.png)
 
+# ref
+[jenkins/jnlp-slave - Docker Hub](https://hub.docker.com/r/jenkins/jnlp-slave/)
+
+[How to Create Permanent Agents with Docker – CloudBees Support](https://support.cloudbees.com/hc/en-us/articles/115001771692-How-to-Create-Permanent-Agents-with-Docker)
