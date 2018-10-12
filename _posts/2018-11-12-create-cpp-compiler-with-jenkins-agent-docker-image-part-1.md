@@ -53,3 +53,5 @@ g++ helloworld.cpp -o helloworld
 ![](/assets/images/2018-11-12-create-cpp-compiler-with-jenkins-agent-docker-image/2018-10-12_23-31-05.png)
 
 錯誤訊息 `g++: not found` 代表我們的 Agent 沒有 C++ 編譯環境
+
+接續 
