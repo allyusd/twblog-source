@@ -9,9 +9,9 @@ tags: 2019-iT-邦幫忙鐵人賽 Cpp Docker Jenkins
 
 選擇左方選單的`新增作業`，然後名稱輸入 `test` 並且選擇建置 `Free-Style 軟體專案` 之後按下 OK
 
-![](/assets/images/2018-11-12-create-cpp-compiler-with-jenkins-agent-docker-image/2018-10-12_22-57-50.png)
+![](/assets/images/2018-10-12-create-cpp-compiler-with-jenkins-agent-docker-image-part-1/2018-10-12_22-57-50.png)
 
-![](/assets/images/2018-11-12-create-cpp-compiler-with-jenkins-agent-docker-image/2018-10-12_23-11-45.png)
+![](/assets/images/2018-10-12-create-cpp-compiler-with-jenkins-agent-docker-image-part-1/2018-10-12_23-11-45.png)
 
 之後會自動進入 test 專案的設定，拉到最下方的`建置`，選擇`新增建置步驟`後按下`執行 Shell`，在指令欄位輸入
 
@@ -21,13 +21,13 @@ cat /etc/*-release
 
 按下儲存後，自動切換到專案主頁，點擊左方`馬上建置`一下，然後點擊左下角`建置歷程`出現的`#1`，再選擇左方的 `Console Output`
 
-![](/assets/images/2018-11-12-create-cpp-compiler-with-jenkins-agent-docker-image/2018-10-12_23-19-09.png)
+![](/assets/images/2018-10-12-create-cpp-compiler-with-jenkins-agent-docker-image-part-1/2018-10-12_23-19-09.png)
 
-![](/assets/images/2018-11-12-create-cpp-compiler-with-jenkins-agent-docker-image/2018-10-12_23-20-07.png)
+![](/assets/images/2018-10-12-create-cpp-compiler-with-jenkins-agent-docker-image-part-1/2018-10-12_23-20-07.png)
 
 在右邊就會出現在 Agent 上執行的結果
 
-![](/assets/images/2018-11-12-create-cpp-compiler-with-jenkins-agent-docker-image/2018-10-12_23-21-26.png)
+![](/assets/images/2018-10-12-create-cpp-compiler-with-jenkins-agent-docker-image-part-1/2018-10-12_23-21-26.png)
 
 看到這個結果，代表我們的 Jenkins 系統正確的運作喔。
 
@@ -35,7 +35,7 @@ cat /etc/*-release
 
 照著上面的流程，再新增一個專案，命名為 test_cpp，這次在`原始碼管理`選擇 `Git` 並且輸入 git 網址 `https://github.com/allyusd/helloworld.cpp.git`
 
-![](/assets/images/2018-11-12-create-cpp-compiler-with-jenkins-agent-docker-image/2018-10-12_23-25-37.png)
+![](/assets/images/2018-10-12-create-cpp-compiler-with-jenkins-agent-docker-image-part-1/2018-10-12_23-25-37.png)
 
 然後在`執行 Shell`輸入編譯跟執行的動作，
 
@@ -46,10 +46,10 @@ g++ helloworld.cpp -o helloworld
 
 按下儲存後，點選馬上建置，但是，我們得到一個紅燈，代表建置失敗
 
-![](/assets/images/2018-11-12-create-cpp-compiler-with-jenkins-agent-docker-image/2018-10-12_23-29-19.png)
+![](/assets/images/2018-10-12-create-cpp-compiler-with-jenkins-agent-docker-image-part-1/2018-10-12_23-29-19.png)
 
 讓我們看一下錯誤訊息
 
-![](/assets/images/2018-11-12-create-cpp-compiler-with-jenkins-agent-docker-image/2018-10-12_23-31-05.png)
+![](/assets/images/2018-10-12-create-cpp-compiler-with-jenkins-agent-docker-image-part-1/2018-10-12_23-31-05.png)
 
 錯誤訊息 `g++: not found` 代表我們的 Agent 沒有 C++ 編譯環境，在下一篇我們來解決這個問題
