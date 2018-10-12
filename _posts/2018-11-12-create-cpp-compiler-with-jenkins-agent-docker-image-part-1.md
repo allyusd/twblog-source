@@ -3,7 +3,7 @@ title: "建立擁有 C++ 編譯環境及 Jenkins Agent 的 Docker Image - Part 1
 tags: 2019-iT-邦幫忙鐵人賽 Cpp Docker Jenkins
 ---
 
-這篇文章主要介紹如何建立一個有 C++ 編譯環境及 Jenkins Agent 的 Docker Image。
+介紹如何建立一個有 C++ 編譯環境及 Jenkins Agent 的 Docker Image。
 
 在 [使用 Docker 安裝 Jenkins Agent](https://twblog.hongjianching.com/2018/10/10/install-jenkins-agent-with-docker/) 我們已經建立了一個有 Agent 的 Jenkins CI 系統，先建立一個小小的專案，單純確認 Jenkins Agent 是否正常運作。
 
@@ -52,6 +52,4 @@ g++ helloworld.cpp -o helloworld
 
 ![](/assets/images/2018-11-12-create-cpp-compiler-with-jenkins-agent-docker-image/2018-10-12_23-31-05.png)
 
-錯誤訊息 `g++: not found` 代表我們的 Agent 沒有 C++ 編譯環境
-
-接續 
+錯誤訊息 `g++: not found` 代表我們的 Agent 沒有 C++ 編譯環境，在下一篇我們來解決這個問題
