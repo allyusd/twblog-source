@@ -46,6 +46,6 @@ g++ helloworld.cpp -o helloworld
 ./helloworld
 ```
 
-看到 Hello Wolrd 完成環境建置！
+看到 Hello Wolrd 就代表我們完成環境建置啦！
 
 ![](/assets/images/2018-10-11-install-cpp-compiler-on-ubuntu/2018-10-11_22-31-48.png)
