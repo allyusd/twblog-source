@@ -16,7 +16,7 @@ COPY jenkins-slave /usr/local/bin/jenkins-slave
 
 ENTRYPOINT ["jenkins-slave"]
 ```
-從中可以知道，就是復製了 slave 檔案以及設定啟動 slave，因為複製做一次就好，所以我們只需要啟動 slave。
+從內容中可以知道，先複製了 slave 檔案然後啟動 slave，因為複製做一次就好，所以我們只需要啟動 slave。
 
 利用 [使用 GitHub 在 DockerHub 自動建置 Docker Image](https://twblog.hongjianching.com/2018/10/08/create-dockerhub-automated-build/) 的方法，建立一個 [docker-jenkins-jnlp-slave-cpp](https://github.com/allyusd/docker-jenkins-jnlp-slave-cpp) github 專案並且建立一個 Dockerfile 檔案，內容就是以 jenkins/jnlp-slave 為基底，加上安裝 C++ 編譯環境，最後記得啟動 slave
 
@@ -28,9 +28,10 @@ RUN apt update && apt install build-essential -y
 ENTRYPOINT ["jenkins-slave"]
 ```
 
-接著在 dockerhub 建立 [jenkins-jnlp-slave-cpp](https://hub.docker.com/r/allyusd/jenkins-jnlp-slave-cpp/) 自動建置專案，並且手動觸發一次，結果失敗了，查詢一下 [Log](https://hub.docker.com/r/allyusd/jenkins-jnlp-slave-cpp/builds/baavigxpyfscewc3e63nbvh/) 居然是 `List directory /var/lib/apt/lists/partial is missing. - Acquire (13: Permission denied)`
+接著在 dockerhub 建立 [jenkins-jnlp-slave-cpp](https://hub.docker.com/r/allyusd/jenkins-jnlp-slave-cpp/) 自動建置專案，並且手動觸發一次，等著拿建置好的 image 來用，
 
-權限不足？這沒道理啊，docker 預設是 root，怎麼會有權限問題呢？等等，剛剛是不是提到了`預設`兩個字。嗯，既然如此，那有可能是被改掉，但是剛剛參考的 Dockerfile 很乾淨，難道是再上一層繼承的 image？
+但是建置結果卻失敗了，來檢查一下 [Log](https://hub.docker.com/r/allyusd/jenkins-jnlp-slave-cpp/builds/baavigxpyfscewc3e63nbvh/)，錯誤訊息居然是 `List directory /var/lib/apt/lists/partial is missing. - Acquire (13: Permission denied)`
+權限不足？這沒道理啊，docker 預設是 root，怎麼會有權限問題呢？等等，剛剛是不是提到了`預設`兩個字。既然如此，那有可能是被改掉了，但是剛剛參考的 Dockerfile 很乾淨，難道是再上一層繼承的 image？
 
 從 Dockerfile 可以看到 jenkins/jnlp-slave 是繼承 jenkins/slave來的，那來看一下 Dockerfile [(source)](https://github.com/jenkinsci/docker-slave/blob/3.26-1/Dockerfile)
 
@@ -107,4 +108,3 @@ docker run \
 這一次順利的建置成功啦！
 
 ![](/assets/images/2018-10-13-create-cpp-compiler-with-jenkins-agent-docker-image-part-2/2018-10-13_22-31-40.png)
-
