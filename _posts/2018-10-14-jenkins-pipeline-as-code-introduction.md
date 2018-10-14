@@ -3,13 +3,13 @@ title: "Jenkins - Pipeline as Code - 簡介"
 tags: 2019-iT-邦幫忙鐵人賽 Jenkins
 ---
 
-Jenkins 是個歷史悠久的 CD 工具，從 Jenkins 2.0 開始正式推展 Pipeline，有別於以往使用 Web UI 操作的特性，導向 Pipeline as Code 的實踐。透過在原始碼專案新增一個 Jenkinsfile 的檔案，將 Pipeline 的流程都寫在檔案內。
+Jenkins 是個歷史悠久的 CI / CD 工具，從 Jenkins 2.0 開始正式推展 Pipeline，有別於以往使用 Web UI 操作的特性，導向 Pipeline as Code 的實踐。透過在原始碼專案新增一個 Jenkinsfile 的檔案，將 Pipeline 的流程都寫在檔案內。
 
-Pipeline 就是流水線的意思，在這裡指 CD 流水線，一個完整的 CD 流程可以包含 Build (建置)、 Test (測試)、Deploy (部署) 三個 state (階段)，每個公司或產品的 CD 流程所包含的 state 可能不同，可以依需要各別調整。
+Pipeline 就是流水線的意思，一個完整的流程可以包含 Build (建置)、 Test (測試)、Deploy (部署) 三個 state (階段)，每個公司或產品的 CD 流程所包含的 state 可能不同，可以依需要各別調整。
 
 簡單 Pipeline 範例 [(source)](https://jenkins.io/doc/book/pipeline/jenkinsfile/)
 
-```Jenkinsfile
+```
 pipeline {
     agent any
 
