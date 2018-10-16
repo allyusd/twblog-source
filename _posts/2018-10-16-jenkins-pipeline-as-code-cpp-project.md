@@ -27,14 +27,16 @@ stage('Build') {
 }
 ```
 
-因為這個簡單的範例沒有 unit test，所以透過執行代替一下
+因為這個簡單的範例沒有 unit test，所以透過執行結果代替一下
 
+```
 stage('Test') {
     steps {
         echo 'Testing..'
         sh './helloworld'
     }
 }
+```
 
 如果要使用建立好的檔案，把 branch 改為 `cpp`，按下建置後，會看到所有階段都成功完成
 
