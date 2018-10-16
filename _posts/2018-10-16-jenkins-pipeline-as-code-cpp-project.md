@@ -15,7 +15,7 @@ agent {
 }
 ```
 
-接著是使用 git 取得原始碼，這邊同樣以 `https://github.com/allyusd/helloworld.cpp.git` 為例，接著執行編譯，修改後的 Build 階段為
+接著是透過 `git` 指令取得原始碼，這邊同樣以 `https://github.com/allyusd/helloworld.cpp.git` 為例，然後透過 `sh` 執行編譯，修改後的 Build 階段為
 
 ```
 stage('Build') {
@@ -38,7 +38,7 @@ stage('Test') {
 }
 ```
 
-如果要使用建立好的檔案，把 branch 改為 `cpp`，按下建置後，會看到所有階段都成功完成
+如果要使用建立好的檔案，直接把 branch 改為 `cpp`，按下建置後，會看到所有階段都成功完成
 
 ![](/assets/images/2018-10-16-jenkins-pipeline-as-code-cpp-project/2018-10-16_22-00-34.png)
 
