@@ -1,5 +1,5 @@
 ---
-title: "Jenkins - Pipeline as Code - 測試報告"
+title: "Jenkins - Pipeline as Code - Last Changes"
 tags: 2019-iT-邦幫忙鐵人賽 Jenkins
 ---
 
