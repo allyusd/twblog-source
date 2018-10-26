@@ -72,3 +72,5 @@ fixed {
 # ref
 
 [Slack Notification Plugin](https://jenkins.io/doc/pipeline/steps/slack/#slack-notification-plugin)
+
+[Cleaning up and notifications](https://jenkins.io/doc/pipeline/tour/post/)
