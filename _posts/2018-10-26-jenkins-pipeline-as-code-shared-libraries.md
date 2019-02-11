@@ -39,3 +39,8 @@ commonPipeline()
 ```
 
 這麼一來，所有的專案的 Jenkinsfile 就只是轉呼叫 commonPipeline，之後只要修改 commonPipeline，所有的專案都會一起更新的，因為他們使用同一份 libary
+
+# ref
+[Extending with Shared Libraries](https://jenkins.io/doc/book/pipeline/shared-libraries/)
+
+[Share a standard Pipeline across multiple projects with Shared Libraries](https://jenkins.io/blog/2017/10/02/pipeline-templates-with-shared-libraries/)
