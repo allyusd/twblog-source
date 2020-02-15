@@ -31,6 +31,7 @@ tags: w3HexSchool Vue.js Slot
 因為我們需要用到多個 slot，需要分別加上 name 用來代表不用的位置
 
 > Layout.vue
+
 ```html
 <template>
     <div class="box">
