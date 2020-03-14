@@ -130,3 +130,6 @@ module.exports.production = DEFAULT.sequelize({
 最後在專案新增資料夾 ```./src/migrations/```
 
 到此完成 ActionHero 操作 MySQL 的設定
+
+#### 參考資料
+[actionhero/ah-sequelize-plugin: sequelize plugin for actionhero](https://github.com/actionhero/ah-sequelize-plugin)
