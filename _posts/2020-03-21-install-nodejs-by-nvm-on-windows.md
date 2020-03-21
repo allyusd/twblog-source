@@ -7,6 +7,13 @@ nvm 是 Node Version Manager，用來管理各種不同的 Node.js 版本的工�
 當各種專案需要使用不同版本的 Node.js 時，透過 nvm 可以快速切換版本
 
 ## 安裝 nvm
+### 透過 Chocolatey 安裝
+
+```shell
+choco install nvm
+```
+
+### 手動安裝
 [coreybutler/nvm-windows: A node.js version management utility for Windows. Ironically written in Go.](https://github.com/coreybutler/nvm-windows)
 
 到 Release 頁面，下載 ```nvm-setup.zip``` 並安裝
