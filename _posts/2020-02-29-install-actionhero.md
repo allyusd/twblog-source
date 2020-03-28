@@ -7,9 +7,20 @@ tags: w3HexSchool ActionHero
 
 官網：[Actionhero](https://www.actionherojs.com/)
 
-一開始先試著使用 yarn 安裝，但是一直卡住，最後退回官方教學
+### Quick start
 
-Quick start
+2020-03-28 更新：已成功使用 yarn 安裝
+~~一開始先試著使用 yarn 安裝，但是一直卡住，最後退回官方教學*~~
+
+## 使用 yarn 安裝
+
+```bash
+npx actionhero generate
+yarn install
+yarn dev
+```
+
+## 使用 npm 安裝
 ```bash
 # Generate a new Project
 npx actionhero generate
@@ -17,6 +28,8 @@ npm install
 npm run build # <--- new! I compile the TS to JS
 npm run dev # <--- new! I use `ts-node` to let you develop on your ts files without compiling
 ```
+
+## 啟動 ActionHero 之後
 
 成功啟動會試著連 Redis, 連不上則啟動失敗，所以需要有 Redis 才能使用
 
