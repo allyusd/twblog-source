@@ -3,6 +3,10 @@ title: "使用 VSCode Debug ActionHero (Nodejs) with TypeScript"
 tags: w3HexSchool ActionHero Nodejs Debug TypeScript
 ---
 
+2020-04-26 Update
+
+發現不明原因導致本文方法失效，新的方法已更新在這 [使用 VSCode Debug Actionhero version 22 on windows](https://twblog.hongjianching.com/2020/04/26/actionhero-v22-debug-with-vscode-on-windows/)
+
 2020-03-19 第一次參加 [Actionhero](https://www.actionherojs.com/) 的 Office Hours，詢問了如何使用 VSCode Debug ActionHero，實際上也是 Node.js with TypeScript 專案如何使用 VSCode Debug 的使用方案。會後 [Evan Tahler](https://www.evantahler.com/) 發了一個 [Pull Request](https://github.com/actionhero/actionhero/pull/1428) 新增了 Debug 相關的變更，同時也更新了[官網的文件](https://www.actionherojs.com/tutorials/repl-and-debugging)。
 
 ## VSCode Debug 設定

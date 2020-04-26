@@ -1,5 +1,7 @@
-更新 Actionhero 版本從 v21 到 v22
-===
+---
+title: "更新 Actionhero 版本從 v21 到 v22"
+tags: w3HexSchool ActionHero
+---
 
 一開始使用 Actionhero 的時候是 21 版，升級到 22 版的時候有一些變化，Actionhero 這次更新異動比較大的原因是，修改了啟動的機制, 接下來說明應該如何調整
 

@@ -1,5 +1,7 @@
-Run GitLab Runner in a container and support docker in docker
-===
+---
+title: "Run GitLab Runner in a container and support docker in docker"
+tags: w3HexSchool GitLab CI CD DevOps Docker
+---
 
 使用 GitLab Runner，可以選擇直接安裝，或者使用 Docker Image，也是這次範例的方式。一般設定的話，不能在這個 Runner 執行 docker in docker 的操作，下面是需要的設定。
 
