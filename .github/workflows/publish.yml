@@ -1,0 +1,43 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on: push
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: allyusd/ubuntu-jekyll
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+
+    # Runs a set of commands using the runners shell
+    - name: Run a multi-line script
+      run: |
+        # per-build
+        # install git
+        apt-get update -y && apt-get install git -y
+        # run ssh-agent
+        eval $(ssh-agent -s)
+        # add ssh key stored in SSH_PRIVATE_KEY variable to the agent store
+        ssh-add <(echo "$DEPLOY_KEY")
+        # disable host key checking (NOTE: makes you susceptible to man-in-the-middle attacks)
+        # WARNING: use only in docker container, if you use it with shell you will overwrite your user's ssh config
+        mkdir -p ~/.ssh
+        echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+        # config user info
+        git config --global user.email "allyusd@yahoo.com.tw"
+        git config --global user.name "Hong, Jian-Ching"
+        git clone git@github.com:allyusd/twblog.git $CI_PROJECT_DIR/_site
+        # per-build
+        bundle exec jekyll build    
+        # deploy
+        cd _site
+        git add -A
+        git commit -m "update from source"
+        git push
