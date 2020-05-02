@@ -1,9 +1,9 @@
 ---
-title: "使用 VSCode Debug Actionhero version 22 on windows"
+title: "使用 VSCode debug Actionhero version 22 on windows"
 tags: w3HexSchool ActionHero Debug
 ---
 
-在之前[使用 VSCode Debug ActionHero (Nodejs) with TypeScript](https://twblog.hongjianching.com/2020/03/28/actionhero-nodejs-debug-with-typescript-on-vscode/)文章中討論過如何使用 VSCode 對 Actionhero 專案進行 Debug，但是後來發現原本的方法失效了。
+在之前 [使用 VSCode Debug ActionHero (Nodejs) with TypeScript](https://twblog.hongjianching.com/2020/03/28/actionhero-nodejs-debug-with-typescript-on-vscode/) 文章中討論過如何使用 VSCode 對 Actionhero 專案進行 Debug，但是後來發現原本的方法失效了。
 
 在 04-23 的 Office Hours 中，[Evan Tahler](https://github.com/evantahler) 及 [Greg Coonrod](https://github.com/gcoonrod) 提供了新的設定，相關的變更在 [better debugging support by evantahler · Pull Request #1439 · actionhero/actionhero](https://github.com/actionhero/actionhero/pull/1439) 之中。
 
