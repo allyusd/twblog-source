@@ -34,24 +34,31 @@ pipeline {
 ```
 
 # pipeline
+
 Jenkinsfile 的開頭宣告
 
 # agent
+
 指定什麼條件的 agent 可以執行這個專案，any 表示不指定，任意 agent 都可以執行，這個設定相當於 UI 上的`限制專案執行節點`，可以用 label 指定 agent 標籤，假如指定 `test` 的話
+
 ```
-agent { 
+agent {
     label 'test'
 }
 ```
+
 另一種情況，如果在不同 state 要分別指定不同 agent 的時候，最上層的 agent 會指定為 none，然後在各自 state 要指定 agent
 
 # stages、stage
+
 代表流水線的各個階段，範例中為 Build, Test, Deploy，這個設定單純為文字，可以依自己的需要命名。主要用在網頁的視覺化效果，像是流水線失敗是在哪一個階段看一眼就可以掌握。或是流水線需要在不同 agent 上執行的時候，就可以透過 stages 分別設定。
 
 # steps
+
 主要執行步驟，常見的是使用 echo 輸出訊息，或是 sh 執行命令。
 
 # ref
+
 [Using a Jenkinsfile](https://jenkins.io/doc/book/pipeline/jenkinsfile/)
 
 [Pipeline Syntax](https://jenkins.io/doc/book/pipeline/syntax/#stages)

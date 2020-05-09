@@ -42,14 +42,13 @@ docker run -d --name gitlab-runner-runner-01 --restart always \
 
 同樣因為有指定 `-v` 參數，所以會從指定的 Host 路徑讀取設定檔執行 runner。
 
-
 ## Ref
+
 [Registering Runners | GitLab](https://docs.gitlab.com/runner/register/index.html#docker)
 [Run GitLab Runner in a container | GitLab](https://docs.gitlab.com/runner/install/docker.html)
 
-
-
 ## TODO 如果有機會再補充的資料
+
 .gitlab-ci-yml 範例
 配合的 .gitlab-ci-yml 範例
 真實的 gitlab project 範例？

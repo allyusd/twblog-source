@@ -10,6 +10,7 @@ tags: w3HexSchool ActionHero Debug
 會後，尤於環境不同(我想兩位作者都是使用 Mac 開發環境)，我在 Windows 使用新的設定時，遇到了一些問題，經過反覆嘗試，成功的使用 VSCode 進行 Debug。
 
 其中是針對 `package.json` 的 debug script 改為 node，而非使用 ts-node-dev，原因不明，但我使用原本 script 的 ts-node-dev 版本，會發生 breakpoint 跳動的情況，似乎是 sourcemap 無法正確對應。
+
 ```json
 "debug": "tsc && node --inspect -- ./dist/server",
 ```
@@ -30,8 +31,8 @@ tags: w3HexSchool ActionHero Debug
       "localRoot": "${workspaceFolder}",
       "outFiles": ["${workspaceRoot}/dist/**/*.js"],
       "sourceMaps": true,
-      "remoteRoot": "${workspaceFolder}",
-    },
+      "remoteRoot": "${workspaceFolder}"
+    }
   ]
 }
 ```

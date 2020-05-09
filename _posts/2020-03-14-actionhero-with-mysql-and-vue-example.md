@@ -7,69 +7,69 @@ tags: w3HexSchool ActionHero MySQL Vue.js
 
 ## Migrations
 
-首先建立一個 Migration 幫助新增資料表，新增 ```from ./src/migrations/0000001-createUsersTable.js``` 檔案
+首先建立一個 Migration 幫助新增資料表，新增 `from ./src/migrations/0000001-createUsersTable.js` 檔案
 
 ```js
 module.exports = {
-  up: async function(migration, DataTypes) {
+  up: async function (migration, DataTypes) {
     await migration.createTable(
       "users",
       {
         guid: {
           type: DataTypes.UUID,
           defaultValue: DataTypes.UUIDV4,
-          primaryKey: true
+          primaryKey: true,
         },
 
         firstName: {
           type: DataTypes.STRING(191),
-          allowNull: false
+          allowNull: false,
         },
 
         lastName: {
           type: DataTypes.STRING(191),
-          allowNull: false
+          allowNull: false,
         },
 
         email: {
           type: DataTypes.STRING(191),
-          allowNull: false
+          allowNull: false,
         },
 
         passwordHash: {
           type: DataTypes.TEXT,
-          allowNull: true
+          allowNull: true,
         },
 
         lastLoginAt: {
           type: DataTypes.DATE,
-          allowNull: true
+          allowNull: true,
         },
 
         createdAt: DataTypes.DATE,
         updatedAt: DataTypes.DATE,
-        deletedAt: DataTypes.DATE
+        deletedAt: DataTypes.DATE,
       },
       {
-        charset: "utf8mb4"
+        charset: "utf8mb4",
       }
     );
 
     await migration.addIndex("users", ["email"], {
       unique: true,
-      fields: "email"
+      fields: "email",
     });
   },
 
-  down: async function(migration) {
+  down: async function (migration) {
     await migration.dropTable("users");
-  }
+  },
 };
 ```
 
 ## Models
 
-接著新增 User Model，新增 ```src/models/User.ts```檔案到專案中
+接著新增 User Model，新增 `src/models/User.ts`檔案到專案中
 
 ```ts
 import * as bcrypt from "bcrypt";
@@ -80,7 +80,7 @@ import {
   AllowNull,
   IsEmail,
   BeforeCreate,
-  HasMany
+  HasMany,
 } from "sequelize-typescript";
 import * as uuid from "uuid/v4";
 
@@ -130,7 +130,7 @@ export class User extends Model<User> {
 }
 ```
 
-在處理使用者密碼的部份，有使用```bcrypt```，記得要安裝套件
+在處理使用者密碼的部份，有使用`bcrypt`，記得要安裝套件
 
 ```bash
 npm install bcrypt --save
@@ -138,7 +138,7 @@ npm install bcrypt --save
 
 ## Action
 
-將資料庫相關都處理好之後，就是 Action 啦，新增 ```./src/actions/user.ts```
+將資料庫相關都處理好之後，就是 Action 啦，新增 `./src/actions/user.ts`
 
 ```ts
 import { Action } from "actionhero";
@@ -154,7 +154,7 @@ export class UserCreate extends Action {
       firstName: { required: true },
       lastName: { required: true },
       password: { required: true },
-      email: { required: true }
+      email: { required: true },
     };
   }
 
@@ -162,7 +162,7 @@ export class UserCreate extends Action {
     const user = new User({
       firstName: params.firstName,
       lastName: params.lastName,
-      email: params.email
+      email: params.email,
     });
     await user.save();
     await user.updatePassword(params.password);
@@ -173,7 +173,7 @@ export class UserCreate extends Action {
 
 ## Vue.js 範例
 
-記得先修改 ActionHero 專案中的```src\config\servers\web.ts```，將 port 從 8080 改為 8081，避免跟 Vue 專案衝突
+記得先修改 ActionHero 專案中的`src\config\servers\web.ts`，將 port 從 8080 改為 8081，避免跟 Vue 專案衝突
 
 ```ts
 // Port or Socket Path
@@ -233,4 +233,5 @@ SQL 查詢結果
 ![](/assets/images/2020-03-14/2020-03-08_14-33-02.png)
 
 #### 參考資料
+
 [actionhero/ah-sequelize-plugin: sequelize plugin for actionhero](https://github.com/actionhero/ah-sequelize-plugin)

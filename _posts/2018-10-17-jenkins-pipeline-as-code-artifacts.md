@@ -13,7 +13,7 @@ tags: 2019-iT-邦幫忙鐵人賽 Jenkins
 
 首先要在 Build、Test 階段分別指定不同的 Agent，在 Build 使用有 C++ 編釋環境的 `cpp` 標籤，在 Test 則使用沒有 C++ 編釋環境的 `test` 標籤，這樣的設定可以確保編釋完成的檔案可以順利的發佈，避免只能在開發環境執行的情況。
 
-```    
+```
 stage('Build') {
     agent {
         label 'test'
@@ -24,7 +24,7 @@ stage('Build') {
 }
 ```
 
-```    
+```
 stage('Test') {
     agent {
         label 'cpp'
@@ -38,6 +38,7 @@ stage('Test') {
 除了上面兩個設定之外，別忘了在最一開始[介紹](https://twblog.hongjianching.com/2018/10/14/jenkins-pipeline-as-code-introduction/)的時候說過，當各個 state 使用各自的 agent 宣告時，最頂級的 agent 要宣告為 none
 
 完整的 Jenkinsfile 為下
+
 ```
 pipeline {
     agent none
@@ -98,6 +99,7 @@ post {
     }
 }
 ```
+
 同時在 Test 階段要取得已封存的檔案，這裡可以透過 `BUILD_URL` 環境變數來取得要下載的網址。然後將下載後的檔案加上執行的權限，最後才是執行檔案
 
 ```

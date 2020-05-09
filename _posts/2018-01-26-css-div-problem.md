@@ -63,14 +63,14 @@ tags: CSS
 ```html
 <div class="row">
   <div class="column">
-    <div class="block1">　</div>
-    <div class="block1 highlight">　</div>
-    <div class="block1">　</div>
+    <div class="block1"></div>
+    <div class="block1 highlight"></div>
+    <div class="block1"></div>
   </div>
   <div class="column">
-    <div class="block2">　</div>
-    <div class="block2 highlight">　</div>
-    <div class="block2">　</div>
+    <div class="block2"></div>
+    <div class="block2 highlight"></div>
+    <div class="block2"></div>
   </div>
 </div>
 ```

@@ -21,4 +21,4 @@ wget -c -r -np -k -L -p http://yabit.et.nthu.edu.tw/2016storyland/document/repor
 wget -c -r -np -k -L -p http://yabit.et.nthu.edu.tw/2016storyland/document/report/ --remote-encoding=utf-8 --restrict-file-names=nocontrol
 ```
 
-[^1]:[Stack Overflow - wget and special characters](https://stackoverflow.com/questions/11350310/wget-and-special-characters)
+[^1]: [Stack Overflow - wget and special characters](https://stackoverflow.com/questions/11350310/wget-and-special-characters)

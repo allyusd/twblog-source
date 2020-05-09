@@ -11,11 +11,11 @@ tags: 2019-iT-邦幫忙鐵人賽
 
 ## 參賽主要目的
 
-* 為明年鐵人賽準備
+- 為明年鐵人賽準備
 
 本來打算準備一年，明年再參加的，但是想想，沒參加過怎麼知道該準備什麼？該注意什麼？該改進什麼呢？所以就報名參賽了。
 
-* 清除堆積的筆記
+- 清除堆積的筆記
 
 [個人部落格 - Jian-Ching 記事本](https://twblog.hongjianching.com/)
 
@@ -23,25 +23,25 @@ tags: 2019-iT-邦幫忙鐵人賽
 
 相反的，hackmd 中好幾篇筆記堆積已久，利用這個機會強迫自己清理一下。
 
-* 主題
+- 主題
 
 這次的系列文章雖然都跟軟體開發有關，但沒有特定的主題。從筆記中找到的 tag 有
 
-* DevOps、CI、CD
-    * GitLab
-    * Jenkins
-* Docker
-* Shell Script
-* Agile
-* Ubuntu
-* Qt
-* C#
-* Angular
-* Database
-* Python
-* Socket
-* Game programming
-* Software & Tool
+- DevOps、CI、CD
+  - GitLab
+  - Jenkins
+- Docker
+- Shell Script
+- Agile
+- Ubuntu
+- Qt
+- C#
+- Angular
+- Database
+- Python
+- Socket
+- Game programming
+- Software & Tool
 
 上述主題不一定會出現，對特定主題有興趣的話，可以留言作為發文參考。
 (如果有人在看的話 XD)

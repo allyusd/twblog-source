@@ -69,6 +69,7 @@ Run Test, 成功通過測試
 ![](/assets/images/2018-07-28-qt-unit-test-with-visual-studio/2018-07-28_17-51-25.png)
 
 ## 其它
+
 如果你的 Goolge Test Apapter 發生錯誤，可以確認一下是否是遇到這個問題，如果問題還未修復，可以先將 Visual Studio 切換為英文語系即可正常使用。
 
 [Google test adapter does not work when the UI of Visual Studio is non english · Issue #121 · Microsoft/TestAdapterForGoogleTest](https://github.com/Microsoft/TestAdapterForGoogleTest/issues/121)

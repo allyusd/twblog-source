@@ -18,11 +18,13 @@ cd /usr/src/gtest
 ```
 
 透過 cmake 進行建置設定，產生 makefile
+
 ```bash
 cmake CMakeLists.txt
 ```
 
 最後進行建置
+
 ```bash
 make
 ```
@@ -32,12 +34,13 @@ make
 接著建立一個檔案測試一下
 
 unittest.cpp
+
 ```cpp
 #include <gtest/gtest.h>
 
 #define HELLOWORLD "Hello World"
- 
-TEST(GoogleTest, HelloWorld) { 
+
+TEST(GoogleTest, HelloWorld) {
     ASSERT_EQ("Hello World", HELLOWORLD);
 }
 
@@ -60,6 +63,7 @@ g++ unittest.cpp -o unittest -Igtest/include -Lgtest/lib -lgtest -lpthread
 ```
 
 建置成功後，執行測試程式
+
 ```bash
 ./unittest
 ```

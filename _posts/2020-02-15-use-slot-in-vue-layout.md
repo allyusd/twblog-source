@@ -13,13 +13,13 @@ tags: w3HexSchool Vue.js Slot
 
 ```html
 <template>
-    <div class="outside-box">
-        <div class="box">
-            <div class="item left">left</div>            
-            <div class="item center">center</div>
-            <div class="item right">right</div>
-        </div>
+  <div class="outside-box">
+    <div class="box">
+      <div class="item left">left</div>
+      <div class="item center">center</div>
+      <div class="item right">right</div>
     </div>
+  </div>
 </template>
 ```
 
@@ -34,21 +34,22 @@ tags: w3HexSchool Vue.js Slot
 
 ```html
 <template>
-    <div class="box">
-        <slot name="left"></slot>
-        <slot name="center"></slot>
-        <slot name="right"></slot>
-    </div>
+  <div class="box">
+    <slot name="left"></slot>
+    <slot name="center"></slot>
+    <slot name="right"></slot>
+  </div>
 </template>
 ```
 
 接著將原本的 template 套上 Layout.vue
+
 ```html
 <template>
   <div class="outside-box">
     <Layout>
       <template v-slot:left>
-        <div class="item left">left</div>            
+        <div class="item left">left</div>
       </template>
       <template v-slot:center>
         <div class="item center">center</div>

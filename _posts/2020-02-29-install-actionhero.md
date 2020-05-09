@@ -10,7 +10,7 @@ tags: w3HexSchool ActionHero
 ### Quick start
 
 2020-03-28 更新：已成功使用 yarn 安裝
-~~一開始先試著使用 yarn 安裝，但是一直卡住，最後退回官方教學*~~
+~~一開始先試著使用 yarn 安裝，但是一直卡住，最後退回官方教學\*~~
 
 ## 使用 yarn 安裝
 
@@ -21,6 +21,7 @@ yarn dev
 ```
 
 ## 使用 npm 安裝
+
 ```bash
 # Generate a new Project
 npx actionhero generate

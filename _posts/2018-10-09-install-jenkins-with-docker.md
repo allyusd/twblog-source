@@ -15,6 +15,7 @@ sudo chown -R $USER:$GROUP /data
 ```
 
 透過 docker 啟動 jenkins
+
 ```
 docker run \
     --name jenkins \
@@ -42,7 +43,7 @@ cat /data/jenkins/secrets/initialAdminPassword
 
 ![](/assets/images/2018-10-09-install-jenkins-with-docker/2018-10-09_21-51-52.png)
 
-按下 *Start using Jenkins* 之後就會看到 Jenkins 主頁面了
+按下 _Start using Jenkins_ 之後就會看到 Jenkins 主頁面了
 
 ![](/assets/images/2018-10-09-install-jenkins-with-docker/2018-10-09_21-53-11.png)
 

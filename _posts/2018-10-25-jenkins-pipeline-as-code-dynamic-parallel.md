@@ -32,7 +32,7 @@ for (image in imagelist) {
 }
 ```
 
-上面這段程式要特別注意的是其中 **def image_inside = "${image}"**，這是不能拿掉的喔！另外 **docker.image** 這段是為了執行在 docker image 內，如果是一般的 agent 是不需要這段的。
+上面這段程式要特別注意的是其中 **def image_inside = "\${image}"**，這是不能拿掉的喔！另外 **docker.image** 這段是為了執行在 docker image 內，如果是一般的 agent 是不需要這段的。
 
 雖然這樣已經達到目的了，但是之後要增加 image 還要需要修改 Jenkinsfile，可能的話當然是希望將可能變動的部份抽離出來。
 
@@ -53,6 +53,7 @@ maven:3-alpine,ubuntu:18.04,base/archlinux
 完整的檔案在 [這裡](https://github.com/allyusd/jenkins-pipeline/tree/agent-docker-dynamic-parallel)
 
 # ref
+
 [jenkins - How to properly achieve dynamic parallel action with a declarative pipeline? - DevOps Stack Exchange](https://devops.stackexchange.com/questions/3073/how-to-properly-achieve-dynamic-parallel-action-with-a-declarative-pipeline/3090#3090)
 
 [Limiting Jenkins pipeline to running only on specific nodes - Stack Overflow](https://stackoverflow.com/questions/42652533/limiting-jenkins-pipeline-to-running-only-on-specific-nodes?rq=1)

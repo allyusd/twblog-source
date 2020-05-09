@@ -17,6 +17,7 @@ service nginx start
 就是上面兩行指令，一再的重覆
 
 # Dockerfile
+
 在 [安裝 Docker](https://twblog.hongjianching.com/2018/10/02/install-docker/) 時有提過，使用 Docker 其中一個優勢就是繼承，這個特性在 Dockerfile 可以體現出來。
 
 Dockerfile 最基本的指令是 FROM，也就是這個 Dockerfile 是繼承哪個 image 的。有一行就可以視為合格的 Dockerfile，像是我們用 ubuntu 當基底。
@@ -58,6 +59,7 @@ docker build . -t webserver
 ```bash
 docker images
 ```
+
 ![](/assets/images/2018-10-06-using-dockerfile-build-docker-image/2018-10-06_22-09-13.png)
 
 從圖片中可以看到，除了我們之前用到的 hello-wrold 和 ubuntu:18.04 之外，還多了一個 webserver 的 image，這就是剛剛建立好的映像檔。這麼一來我們把之前的指令改用 webserver 來啟動吧。

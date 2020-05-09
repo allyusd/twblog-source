@@ -22,9 +22,10 @@ tags: 2019-iT-邦幫忙鐵人賽 Jenkins
 按下之後會有完整的圖文教學，首先要到 Jenkins 管理頁面安裝 **Slack Notification Plugin**，我使用的 Jenkins 版本跟教學的圖片不一樣，會省略 Plugin 文字，所以要搜尋的話最好只用前面的 **Slack Notification** 會比較好找到。
 
 安裝完外掛之後，要到**管理 Jenkins**，**設定系統**的**Global Slack Notifier Settings** 貼上從 Jenkins CI App 教學頁面給的設定
-* 設定 Base URL 為https://xxx.slack.com/services/hooks/jenkins-ci/
-* 設定 Integration Token 為 Mursq71aDfDJke4cvUWx9n2f
-* 設定 Channel 為 general
+
+- 設定 Base URL 為https://xxx.slack.com/services/hooks/jenkins-ci/
+- 設定 Integration Token 為 Mursq71aDfDJke4cvUWx9n2f
+- 設定 Channel 為 general
 
 設定後可以按一下 **Test Connection**，成功時 Slack 會出現測試訊息
 

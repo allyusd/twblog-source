@@ -26,23 +26,24 @@ npm install mysql2 --save
 
 ## 設定
 
-修改專案中的 ```./src/config/plugins.ts```
+修改專案中的 `./src/config/plugins.ts`
 
 ```ts
 import * as path from "path";
 
 export const DEFAULT = {
-  plugins: config => {
+  plugins: (config) => {
     return {
       "ah-sequelize-plugin": {
-        path: path.join(process.cwd(), "node_modules", "ah-sequelize-plugin")
-      }
+        path: path.join(process.cwd(), "node_modules", "ah-sequelize-plugin"),
+      },
     };
-  }
+  },
 };
 ```
 
-增加 ```experimentalDecorators``` and ```emitDecoratorMetadata``` 到專案 ```tsconfig.json```
+增加 `experimentalDecorators` and `emitDecoratorMetadata` 到專案 `tsconfig.json`
+
 ```json
 {
   "compilerOptions": {
@@ -51,21 +52,21 @@ export const DEFAULT = {
     "module": "commonjs",
     "target": "es2018",
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
+    "emitDecoratorMetadata": true
   },
   "include": ["./src/**/*"]
 }
 ```
 
-新增檔案到專案中 ```./src/config/sequelize.js```
+新增檔案到專案中 `./src/config/sequelize.js`
 記得在 mysql 要建立 actionhero 資料庫
 
 ```js
-const { URL } = require('url')
-const path = require('path')
+const { URL } = require("url");
+const path = require("path");
 
 const DEFAULT = {
-  sequelize: config => {
+  sequelize: (config) => {
     let dialect = "postgres";
     let host = "127.0.0.1";
     let port = "5432";
@@ -103,9 +104,9 @@ const DEFAULT = {
       username: username,
       password: password,
       models: [path.join(__dirname, "..", "models")],
-      migrations: [path.join(__dirname, "..", "migrations")]
+      migrations: [path.join(__dirname, "..", "migrations")],
     };
-  }
+  },
 };
 
 module.exports.DEFAULT = DEFAULT;
@@ -113,23 +114,24 @@ module.exports.DEFAULT = DEFAULT;
 // for the sequelize CLI tool
 module.exports.development = DEFAULT.sequelize({
   env: "development",
-  process: { env: "development" }
+  process: { env: "development" },
 });
 
 module.exports.staging = DEFAULT.sequelize({
   env: "staging",
-  process: { env: "staging" }
+  process: { env: "staging" },
 });
 
 module.exports.production = DEFAULT.sequelize({
   env: "production",
-  process: { env: "production" }
+  process: { env: "production" },
 });
 ```
 
-最後在專案新增資料夾 ```./src/migrations/```
+最後在專案新增資料夾 `./src/migrations/`
 
 到此完成 ActionHero 操作 MySQL 的設定
 
 #### 參考資料
+
 [actionhero/ah-sequelize-plugin: sequelize plugin for actionhero](https://github.com/actionhero/ah-sequelize-plugin)

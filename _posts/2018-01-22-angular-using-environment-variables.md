@@ -16,21 +16,21 @@ Angular 專案中，如果有依環境不同而需要不同的設定時，像是
 使 apiUrl 為例，設定兩個檔案
 
 environment.ts:
+
 ```ts
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost/api/',
+  apiUrl: "http://localhost/api/",
 };
-
 ```
 
 environment.prod.ts:
+
 ```ts
 export const environment = {
   production: true,
-  apiUrl: 'http://demo.com/api/',
+  apiUrl: "http://demo.com/api/",
 };
-
 ```
 
 然後編輯 foo.service.ts

@@ -46,7 +46,7 @@ vagrant up
 
 如果是第一次使用這個 Box，會從 Atlas 網站下載，時間視檔案大小及網路速度而定，第二次之後就會省去這個動作，順便一提，下載後 Box 存放的路徑在 %USERPROFILE%\.vagrant.d\boxes。等進度條跑完，Vagrant 就會依照設定把 VM 開起來嘍。
 
-接著使用 ssh 登入 VM吧。
+接著使用 ssh 登入 VM 吧。
 
 ```bash
 vagrant ssh
@@ -96,8 +96,8 @@ sudo usermod -aG docker ${USER}
 
 ## Udpate
 
-* 2016-07-16 因為 williamyeh/ubuntu-trusty64-docker 除了安裝 docker 之外有其它客製化，為了保持環境單純，改用 ubuntu/trusty64 當範例
-* 2017-12-12 搬移網站，調整為 markdown
+- 2016-07-16 因為 williamyeh/ubuntu-trusty64-docker 除了安裝 docker 之外有其它客製化，為了保持環境單純，改用 ubuntu/trusty64 當範例
+- 2017-12-12 搬移網站，調整為 markdown
 
 ## 資料來源
 
@@ -107,4 +107,4 @@ sudo usermod -aG docker ${USER}
 
 [Vagrant box: can't login with password from VirtualBox GUI](http://stackoverflow.com/questions/26524691/vagrant-box-cant-login-with-password-from-virtualbox-gui)
 
-[《Docker —— 從入門到實踐­》正體中文版 - Ubuntu 系列安裝 Docker](https://philipzheng.gitbooks.io/docker_practice/content/install/ubuntu.html)
+[《Docker —— 從入門到實踐 ­》正體中文版 - Ubuntu 系列安裝 Docker](https://philipzheng.gitbooks.io/docker_practice/content/install/ubuntu.html)

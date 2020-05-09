@@ -9,34 +9,33 @@ tags: 2019-iT-邦幫忙鐵人賽 Docker Jenkins
 
 # Jenkins Master 設定
 
-首先在 Jenkins 網頁選擇 *管理 Jenkins*
+首先在 Jenkins 網頁選擇 _管理 Jenkins_
 
 ![](/assets/images/2018-10-10-install-jenkins-agent-with-docker/2018-10-10_21-41-38.png)
 
-接著往下找到 *管理節點*，然後點擊 *Master*
+接著往下找到 _管理節點_，然後點擊 _Master_
 
 ![](/assets/images/2018-10-10-install-jenkins-agent-with-docker/2018-10-10_21-44-34.png)
 
 ![](/assets/images/2018-10-10-install-jenkins-agent-with-docker/2018-10-10_21-45-56.png)
 
-這個節點就是 Jenkins Master，也是目前操作網站所在的位置，選擇左方的 *設定*
+這個節點就是 Jenkins Master，也是目前操作網站所在的位置，選擇左方的 _設定_
 
 ![](/assets/images/2018-10-10-install-jenkins-agent-with-docker/2018-10-10_21-47-13.png)
 
-為了避免有任何的工作在 Master 上面執行，把 *執行程式數* 設為 **0** 然後儲存
+為了避免有任何的工作在 Master 上面執行，把 _執行程式數_ 設為 **0** 然後儲存
 
 ![](/assets/images/2018-10-10-install-jenkins-agent-with-docker/2018-10-10_21-49-25.png)
 
-我們可以在左下方看到原本的兩個執行程式狀態消失了，接著點左上方的 *節點* 回到管理節點頁面
+我們可以在左下方看到原本的兩個執行程式狀態消失了，接著點左上方的 _節點_ 回到管理節點頁面
 
 ![](/assets/images/2018-10-10-install-jenkins-agent-with-docker/2018-10-10_21-51-31.png)
 
-這次選擇 *新增節點*
+這次選擇 _新增節點_
 
 ![](/assets/images/2018-10-10-install-jenkins-agent-with-docker/2018-10-10_21-53-30.png)
 
-
-輸入節點名稱為 *agent* 並且按下 *Permanent Agent* 之後按下 OK
+輸入節點名稱為 _agent_ 並且按下 _Permanent Agent_ 之後按下 OK
 
 ![](/assets/images/2018-10-10-install-jenkins-agent-with-docker/2018-10-10_21-54-33.png)
 
@@ -44,7 +43,7 @@ tags: 2019-iT-邦幫忙鐵人賽 Docker Jenkins
 
 ![](/assets/images/2018-10-10-install-jenkins-agent-with-docker/2018-10-10_21-56-11.png)
 
-在管理節點頁面按下剛剛新增的 *agnet*
+在管理節點頁面按下剛剛新增的 _agnet_
 
 ![](/assets/images/2018-10-10-install-jenkins-agent-with-docker/2018-10-10_21-57-36.png)
 
@@ -71,6 +70,7 @@ docker run \
 ![](/assets/images/2018-10-10-install-jenkins-agent-with-docker/2018-10-10_22-12-40.png)
 
 # ref
+
 [jenkins/jnlp-slave - Docker Hub](https://hub.docker.com/r/jenkins/jnlp-slave/)
 
 [How to Create Permanent Agents with Docker – CloudBees Support](https://support.cloudbees.com/hc/en-us/articles/115001771692-How-to-Create-Permanent-Agents-with-Docker)

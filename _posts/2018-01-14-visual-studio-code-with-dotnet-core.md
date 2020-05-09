@@ -99,7 +99,7 @@ static void Main(string[] args)
 
 首先要調整 vs-code 偵錯相關設定檔 **.vscode/launch.json**，找到 **console** 參數，改為 **integratedTerminal**。[^1]
 
-[^1]:[Configurating launch.json for C# debugging](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window)
+[^1]: [Configurating launch.json for C# debugging](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window)
 
 ```
 "console": "integratedTerminal",

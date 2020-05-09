@@ -10,6 +10,7 @@ tags: 2019-iT-邦幫忙鐵人賽 Docker Dockerhub
 在這之前有個疑問，那之前我們使用的 image，像是 hello-world、ubuntu:18.04 是從哪裡來的呢？
 
 # Docker Hub
+
 來源其實就是 [Docker Hub](https://hub.docker.com/)，目前是 Docker 預設的 image 來源，像是 [hello-world](https://hub.docker.com/_/hello-world/)、[ubuntu](https://hub.docker.com/_/ubuntu/)。從網站上可以找看看自己有興趣的 image，或者上傳自己的 image。
 
 我們建立好 Docker Hub 帳號之後，就可以建立 image repository，按右上角的 Create，然後選擇 Create Repository
@@ -41,6 +42,7 @@ docker login
 ```bash
 docker push allyusd/ithelp-webserver
 ```
+
 ![](/assets/images/2018-10-07-push-image-to-dockerhub/2018-10-07_22-11-55.png)
 
 完成後可以回到 dockerhub 專案的位置，選擇 Tags 就可以看到剛剛上傳的資訊
@@ -62,6 +64,7 @@ docker run \
     -v ~/www:/var/www/html \
     allyusd/ithelp-webserver
 ```
+
 ![](/assets/images/2018-10-07-push-image-to-dockerhub/2018-10-07_22-18-26.png)
 
 這麼一來，我們就可以在任何電腦啟動我們自己做的映像檔

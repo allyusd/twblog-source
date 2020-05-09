@@ -9,11 +9,12 @@ tags: 2019-iT-邦幫忙鐵人賽 Jenkins Ubuntu
 **節點名稱**輸入 **ubuntu-18.04**，按下 OK
 
 接著在設定頁輸入
-* 遠端檔案系統根目錄：**/data/jenkins**
-* 啟動模式：**透過 SSH 啟動 Unitx 主機上的 agnet代理程式**
-* 主機：輸入 IP
-* Credentials：輸入登入主機的 SSH 帳號及密碼
-* Host Key Verification Strategy：圖方便跳過驗證，選擇**Non verifying Verification Strategy**
+
+- 遠端檔案系統根目錄：**/data/jenkins**
+- 啟動模式：**透過 SSH 啟動 Unitx 主機上的 agnet 代理程式**
+- 主機：輸入 IP
+- Credentials：輸入登入主機的 SSH 帳號及密碼
+- Host Key Verification Strategy：圖方便跳過驗證，選擇**Non verifying Verification Strategy**
 
 ![](/assets/images/2018-10-22-install-jenkins-agent-on-ubuntu/2018-10-22_21-43-37.png)
 

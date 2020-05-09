@@ -12,28 +12,28 @@ tags: w3HexSchool ActionHero
 ### 程式碼
 
 ```ts
-import { Action } from "actionhero"
+import { Action } from "actionhero";
 
 export class SumAction extends Action {
   constructor() {
     super();
     this.name = "sum";
-    this.description = "return sum of a and b"
-    this.outputExample = { sum: 3 }
+    this.description = "return sum of a and b";
+    this.outputExample = { sum: 3 };
     this.inputs = {
       a: {
-        required: true
+        required: true,
       },
       b: {
-        required: true
-      }
-    }
+        required: true,
+      },
+    };
   }
 
   async run({ params, response }) {
     let sum: number = 0;
     sum = Number.parseInt(params.a) + Number.parseInt(params.b);
-    
+
     response.sum = sum;
     return response;
   }
@@ -100,4 +100,3 @@ response: 會回傳輸出參數
 connection: 使用者相關資訊
 
 這個範例中，從 `params` 取得輸入參數 `a`, `b` 轉換為 number 後相加，存到 `sum` 之後透過 `response` 回傳
-

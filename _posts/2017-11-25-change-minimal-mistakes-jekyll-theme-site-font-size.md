@@ -5,7 +5,7 @@ tags: Jekyll Minimal-Mistakes
 
 覺得 Minimal Mistakes 預設的字型大小實在是太大了，對於 Blog 來說很不習慣，幸好可以透過修改 sass 檔來調整全站設定，雖然作者不建議直接修改他。[^1]
 
-原本的 _reset.scss 片段
+原本的 \_reset.scss 片段
 
 ```scss
 html {
@@ -45,4 +45,4 @@ html {
 }
 ```
 
-[^1]:[Upgrade-friendly way of adjusting font sizes globally](https://github.com/mmistakes/minimal-mistakes/issues/1219)
+[^1]: [Upgrade-friendly way of adjusting font sizes globally](https://github.com/mmistakes/minimal-mistakes/issues/1219)

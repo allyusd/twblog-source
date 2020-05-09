@@ -14,9 +14,11 @@ yarn upgrade actionhero@^22.0.7
 yarn add @types/ioredis --dev
 yarn add ts-node-dev --dev
 ```
+
 刪除 `/boot.js` 檔案
 
 新增 `/src/server.ts`
+
 ```ts
 #!/usr/bin/env node
 import { Process } from "actionhero";
@@ -41,6 +43,7 @@ main();
 ```
 
 接著更新 `package.json` 關於 scripts 的部份
+
 ```json
 "scripts": {
   "postinstall": "npm run build",
@@ -85,4 +88,5 @@ yarn add ws
 ```
 
 ## Ref
+
 [Upgrading from v21 to v22 - Actionhero](https://www.actionherojs.com/tutorials/upgrade-path#Upgrading%20from%20v21%20to%20v22)

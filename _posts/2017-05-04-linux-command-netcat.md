@@ -8,6 +8,7 @@ Netcat 是 Linux 下的網路工具，這裡用來進行網路頻寬測試。
 # Ubuntu Install
 
 Ubuntu 16.04.2 LTS 版本已預裝 netcat, 如果你的環境沒有可以自行安裝
+
 ```bash
 sudo apt-get install netcat
 ```
@@ -29,7 +30,7 @@ sudo nc -vvlnp 80 >/dev/null
 # Client Side
 
 使用 dd 產生資料，並透過 netcat 傳送到 server
-此範例會產生 1GM 的資料量 (1MB * 1K)
+此範例會產生 1GM 的資料量 (1MB \* 1K)
 
 ```bash
 dd if=/dev/zero bs=1M count=1K | nc -vvn 13.75.44.147 80
@@ -58,4 +59,5 @@ done
 ```
 
 # Ref
+
 [How do you test the network speed betwen two boxes?](https://askubuntu.com/questions/7976/how-do-you-test-the-network-speed-betwen-two-boxes)

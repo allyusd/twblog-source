@@ -10,40 +10,42 @@ tags: 2019-iT-邦幫忙鐵人賽 Docker Dockerhub Github Dockerfile
 為了 ~~世界和平~~ 讓其它人可以安心下載你製作的 image，也為了節省自己的時間，我們就利用 GitHub 和 DockerHub 來自動建置映像檔吧。
 
 # GitHub
+
 首先要有 GitHub 帳號，接著建立一個 git 倉庫，這邊命名為 docker-ithelp-webserver-auto，命名沒有規範，叫什麼都可以，個人為了跟一般程式碼專案區隔，所以會加上 docker 前缀字，或者可以考慮單獨申請一個獨立帳號來集中 docker 專案。
 
-重要的一點，為了直接在 GitHub 網頁操作，請將 *Initialize this repository with a README* 打勾喔！(想直接用 git 操作的人就可以無視沒關係)
+重要的一點，為了直接在 GitHub 網頁操作，請將 _Initialize this repository with a README_ 打勾喔！(想直接用 git 操作的人就可以無視沒關係)
 
 ![](/assets/images/2018-10-08-create-dockerhub-automated-build/2018-10-08_21-30-16.png)
 
-然後就有一個 Git 倉庫了，接著按下右上角的 *Create new file*
+然後就有一個 Git 倉庫了，接著按下右上角的 _Create new file_
 
 ![](/assets/images/2018-10-08-create-dockerhub-automated-build/2018-10-08_21-32-44.png)
 
-輸入檔名 Dockerfile，和前一篇 Dockerfile 的內容，接著按下 *Commit new file* 就完成 Git 倉庫的準備了。
+輸入檔名 Dockerfile，和前一篇 Dockerfile 的內容，接著按下 _Commit new file_ 就完成 Git 倉庫的準備了。
 
 ![](/assets/images/2018-10-08-create-dockerhub-automated-build/2018-10-08_21-34-47.png)
 
 # DockerHub
-接著到 DockerHub，選擇右上角的 *Create* 及 *Create Automated Build*
+
+接著到 DockerHub，選擇右上角的 _Create_ 及 _Create Automated Build_
 
 ![](/assets/images/2018-10-08-create-dockerhub-automated-build/2018-10-08_21-37-44.png)
 
-第一次因為還沒有連結 GitHub，所以會需要授權，按下 *Link Accounts* 及 *Link Github* 及 *Select*，完成授權後，重覆 *Create Automated Build* 的動作會看到 *Create Auto-build Github*
+第一次因為還沒有連結 GitHub，所以會需要授權，按下 _Link Accounts_ 及 _Link Github_ 及 _Select_，完成授權後，重覆 _Create Automated Build_ 的動作會看到 _Create Auto-build Github_
 
 ![](/assets/images/2018-10-08-create-dockerhub-automated-build/2018-10-08_21-41-52.png)
 
-然後就會出現你 Github 所有的專案，選擇剛剛建立的 docker-ithelp-webserver-auto，接著給 Dockerhub 的倉庫命名，個人習慣會把 docker 前缀字拿掉，這個例子為 ithelp-webserver-auto，輸入 Description 後按下 *Cretae*
+然後就會出現你 Github 所有的專案，選擇剛剛建立的 docker-ithelp-webserver-auto，接著給 Dockerhub 的倉庫命名，個人習慣會把 docker 前缀字拿掉，這個例子為 ithelp-webserver-auto，輸入 Description 後按下 _Cretae_
 
 ![](/assets/images/2018-10-08-create-dockerhub-automated-build/2018-10-08_21-43-32.png)
 
-這麼一來 DockerHub 倉庫也建立完成了，從首頁可以看完最大的不同是會顯示這個 image 的來源，還有選單多了 *Dockerfile*、*Build Details* 和 *Build Settings*，這邊有兩個網頁可以比較一下 [allyusd/ithelp-webserver](https://hub.docker.com/r/allyusd/ithelp-webserver/) 和 [allyusd/ithelp-webserver-auto](https://hub.docker.com/r/allyusd/ithelp-webserver-auto/)
+這麼一來 DockerHub 倉庫也建立完成了，從首頁可以看完最大的不同是會顯示這個 image 的來源，還有選單多了 _Dockerfile_、_Build Details_ 和 _Build Settings_，這邊有兩個網頁可以比較一下 [allyusd/ithelp-webserver](https://hub.docker.com/r/allyusd/ithelp-webserver/) 和 [allyusd/ithelp-webserver-auto](https://hub.docker.com/r/allyusd/ithelp-webserver-auto/)
 
 ![](/assets/images/2018-10-08-create-dockerhub-automated-build/2018-10-08_21-46-47.png)
 
 ![](/assets/images/2018-10-08-create-dockerhub-automated-build/2018-10-08_21-48-42.png)
 
-選擇 *Build Settings* 按下 *Trigger* 之後 Dockerhub 就會依照 Github 上面的 Dockerfile 開始建置嘍！建置的狀態或 Logs 可以在 *Build Details* 查詢。
+選擇 _Build Settings_ 按下 _Trigger_ 之後 Dockerhub 就會依照 Github 上面的 Dockerfile 開始建置嘍！建置的狀態或 Logs 可以在 _Build Details_ 查詢。
 
 ![](/assets/images/2018-10-08-create-dockerhub-automated-build/2018-10-08_21-55-15.png)
 

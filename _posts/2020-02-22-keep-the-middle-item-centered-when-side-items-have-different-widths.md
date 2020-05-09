@@ -47,35 +47,35 @@ tags: w3HexSchool Vue.js CSS
 
 ```html
 <template>
-    <div class="layout-box">
-        <div class="inner-wrapper left">
-            <slot name="left"></slot>
-        </div>
-        <div class="inner-wrapper center">
-            <slot name="center"></slot>
-        </div>
-        <div class="inner-wrapper right">
-            <slot name="right"></slot>
-        </div>
+  <div class="layout-box">
+    <div class="inner-wrapper left">
+      <slot name="left"></slot>
     </div>
+    <div class="inner-wrapper center">
+      <slot name="center"></slot>
+    </div>
+    <div class="inner-wrapper right">
+      <slot name="right"></slot>
+    </div>
+  </div>
 </template>
 ```
 
 ```css
 .layout-box {
-    display : flex;
-    justify-content : space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .inner-wrapper {
-    display: flex;
-    flex: 1;
-    justify-content: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
 }
 .left {
-    margin-right: auto;
+  margin-right: auto;
 }
 .right {
-    margin-left: auto;
+  margin-left: auto;
 }
 ```
 
@@ -87,6 +87,7 @@ tags: w3HexSchool Vue.js CSS
 修改 Layout.vue 的時候，不需要修改使用的程式，即可正確呈現想要的結果。
 
 #### 參考資料
+
 [html - Keep the middle item centered when side items have different widths - Stack Overflow](https://stackoverflow.com/questions/32378953/keep-the-middle-item-centered-when-side-items-have-different-widths)
 
 [In CSS Flexbox, why are there no "justify-items" and "justify-self" properties? - Stack Overflow](https://stackoverflow.com/questions/32551291/in-css-flexbox-why-are-there-no-justify-items-and-justify-self-properties)

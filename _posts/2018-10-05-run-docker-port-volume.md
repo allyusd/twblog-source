@@ -20,9 +20,11 @@ service nginx start
 # -p Port 對映
 
 使用 -p 參數，左邊是 host 的 port 號，右邊是 container 的 port 號。在這個例子中都是 80 port，完整的指令如下(這串指串越來越長了呢…)
+
 ```bash
 docker run --restart=always -d -it -p 80:80 ubuntu:18.04
 ```
+
 執行後可以用 ps 看一下，會發現在 PORTS 欄位多了剛剛加上的設定喔
 ![](/assets/images/2018-10-05-run-docker-port-volume/2018-10-05_22-27-42.png)
 
@@ -31,14 +33,17 @@ docker run --restart=always -d -it -p 80:80 ubuntu:18.04
 ![](/assets/images/2018-10-05-run-docker-port-volume/2018-10-05_22-32-34.png)
 
 # -v Volume 對映
+
 接著，我們想要修改網頁，但是容器內沒有編輯器而且不想安裝，能不能直接在 Host 上面修改，然後直接反應在容器呢？
 
 接著利用 Volume 對映，就好像前面講到可以指定 Port 一樣，只是這次換成了硬碟路徑對映，使用 -v 參數，左邊是 Host 路徑，右邊是 container 路徑。在這個例子中，設定在家目錄的 www，對應到 container 內 nginx 的預設路徑 /usr/share/nginx/html，完整的指令如下
+
 ```bash
 docker run --restart=always -d -it -p 80:80 -v ~/www:/var/www/html ubuntu:18.04
 ```
 
 已經變得超級長了，這時候在 script 或 Dockerfile 中為了方便閱讀，可能會寫成這樣，意思是一樣的
+
 ```
 docker run \
     --restart=always \

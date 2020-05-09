@@ -14,14 +14,15 @@ tags: 2019-iT-邦幫忙鐵人賽 Jenkins
 ![](/assets/images/2018-10-20-jenkins-pipeline-as-code-last-changes/2018-10-20_22-36-41.png)
 
 在管理外掛程式頁面，會有四個分頁
-* 更新
-代表你已安裝的 plugin 有更新的版本可以安裝
-* 可用的
-代表你未安裝的 plugin
-* 已安裝
-代表你已安裝的 plugin
-* 進階
-關於 plugin 安裝的相關設定，HTTP Proxy設定、上傳外掛程式、更新網址等等
+
+- 更新
+  代表你已安裝的 plugin 有更新的版本可以安裝
+- 可用的
+  代表你未安裝的 plugin
+- 已安裝
+  代表你已安裝的 plugin
+- 進階
+  關於 plugin 安裝的相關設定，HTTP Proxy 設定、上傳外掛程式、更新網址等等
 
 在這裡我們選擇`可用的`分頁
 

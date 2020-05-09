@@ -16,6 +16,7 @@ COPY jenkins-slave /usr/local/bin/jenkins-slave
 
 ENTRYPOINT ["jenkins-slave"]
 ```
+
 從內容中可以知道，先複製了 slave 檔案然後啟動 slave，因為複製做一次就好，所以我們只需要啟動 slave。
 
 利用 [使用 GitHub 在 DockerHub 自動建置 Docker Image](https://twblog.hongjianching.com/2018/10/08/create-dockerhub-automated-build/) 的方法，建立一個 [docker-jenkins-jnlp-slave-cpp](https://github.com/allyusd/docker-jenkins-jnlp-slave-cpp) github 專案並且建立一個 Dockerfile 檔案，內容就是以 jenkins/jnlp-slave 為基底，加上安裝 C++ 編譯環境，最後記得啟動 slave
@@ -33,7 +34,7 @@ ENTRYPOINT ["jenkins-slave"]
 但是建置結果卻失敗了，來檢查一下 [Log](https://hub.docker.com/r/allyusd/jenkins-jnlp-slave-cpp/builds/baavigxpyfscewc3e63nbvh/)，錯誤訊息居然是 `List directory /var/lib/apt/lists/partial is missing. - Acquire (13: Permission denied)`
 權限不足？這沒道理啊，docker 預設是 root，怎麼會有權限問題呢？等等，剛剛是不是提到了`預設`兩個字。既然如此，那有可能是被改掉了，但是剛剛參考的 Dockerfile 很乾淨，難道是再上一層繼承的 image？
 
-從 Dockerfile 可以看到 jenkins/jnlp-slave 是繼承 jenkins/slave來的，那來看一下 Dockerfile [(source)](https://github.com/jenkinsci/docker-slave/blob/3.26-1/Dockerfile)
+從 Dockerfile 可以看到 jenkins/jnlp-slave 是繼承 jenkins/slave 來的，那來看一下 Dockerfile [(source)](https://github.com/jenkinsci/docker-slave/blob/3.26-1/Dockerfile)
 
 ```
 FROM openjdk:8-jdk
