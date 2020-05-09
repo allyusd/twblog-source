@@ -3,13 +3,13 @@ title: "GitLab CI/CD 使用 Cache 和 artifacts"
 tags: w3HexSchool GitLabCI CD DevOps
 ---
 
+cache 跟 artifacts 字面上都有保存檔案供以後使用的意思，在 GitLab 使用要特別留意他們的定義
+
 ## 簡答
 
 跨 pipeline 時使用 cache，同 pipeline 跨 job 時使用 artifacts
 
 ## 介紹
-
-cache 跟 artifacts 字面上都有保存檔案供以後使用的意思，在 GitLab 使用要特別留意他們的定義
 
 提醒一點，當你同時使用 caches 和 artifacts 在同一個路徑時，會被覆蓋
 
@@ -41,3 +41,8 @@ artifacts:
   paths:
     - dist/
 ```
+
+[Cache dependencies in GitLab CI/CD | GitLab](https://docs.gitlab.com/ee/ci/caching/)
+[Predefined environment variables reference | GitLab](https://docs.gitlab.com/ee/ci/variables/predefined_variables.html)
+[cache - GitLab CI/CD Pipeline Configuration Reference | GitLab](https://docs.gitlab.com/ee/ci/yaml/README.html#cache)
+[artifacts - GitLab CI/CD Pipeline Configuration Reference | GitLab](https://docs.gitlab.com/ee/ci/yaml/README.html#artifacts)
