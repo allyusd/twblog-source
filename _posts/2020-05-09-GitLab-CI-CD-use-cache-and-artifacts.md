@@ -42,7 +42,9 @@ artifacts:
     - dist/
 ```
 
-[Cache dependencies in GitLab CI/CD | GitLab](https://docs.gitlab.com/ee/ci/caching/)
-[Predefined environment variables reference | GitLab](https://docs.gitlab.com/ee/ci/variables/predefined_variables.html)
-[cache - GitLab CI/CD Pipeline Configuration Reference | GitLab](https://docs.gitlab.com/ee/ci/yaml/README.html#cache)
-[artifacts - GitLab CI/CD Pipeline Configuration Reference | GitLab](https://docs.gitlab.com/ee/ci/yaml/README.html#artifacts)
+### Ref
+
+[Cache dependencies in GitLab CI/CD - GitLab](https://docs.gitlab.com/ee/ci/caching/)
+[Predefined environment variables reference - GitLab](https://docs.gitlab.com/ee/ci/variables/predefined_variables.html)
+[cache - GitLab CI/CD Pipeline Configuration Reference - GitLab](https://docs.gitlab.com/ee/ci/yaml/README.html#cache)
+[artifacts - GitLab CI/CD Pipeline Configuration Reference - GitLab](https://docs.gitlab.com/ee/ci/yaml/README.html#artifacts)
