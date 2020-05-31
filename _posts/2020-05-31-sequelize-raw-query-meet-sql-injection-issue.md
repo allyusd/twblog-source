@@ -94,4 +94,4 @@ select * from ShoppingLog sl
 
 ### Ref
 
-[Manual | Sequelize](https://sequelize.org/master/manual/raw-queries.html)
+[Manual - Sequelize](https://sequelize.org/master/manual/raw-queries.html)
