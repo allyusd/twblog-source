@@ -41,4 +41,4 @@ build:
     - if: $CI_COMMIT_TAG
 ```
 
-[Building images with kaniko and GitLab CI/CD | GitLab](https://docs.gitlab.com/ee/ci/docker/using_kaniko.html)
+[Building images with kaniko and GitLab CI/CD - GitLab](https://docs.gitlab.com/ee/ci/docker/using_kaniko.html)

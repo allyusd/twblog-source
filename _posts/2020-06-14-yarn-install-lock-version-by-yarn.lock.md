@@ -31,7 +31,7 @@ yarn install
 
 ### Ref
 
-[yarn install | Yarn](https://classic.yarnpkg.com/en/docs/cli/install/)
-[yarn cache | Yarn](https://classic.yarnpkg.com/en/docs/cli/cache)
+[yarn install - Yarn](https://classic.yarnpkg.com/en/docs/cli/install/)
+[yarn cache - Yarn](https://classic.yarnpkg.com/en/docs/cli/cache)
 [yarn install changes yarn.lock file · Issue #4379 · yarnpkg/yarn](https://github.com/yarnpkg/yarn/issues/4379)
 [`yarn install --frozen-lockfile` should be the default behavior · Issue #4147 · yarnpkg/yarn](https://github.com/yarnpkg/yarn/issues/4147)
